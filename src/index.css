@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Montserrat, system-ui, sans-serif;
+  --font-serif: Playfair Display, Georgia, serif;
+
+  /* Brand palette tokens used across pages for alternating sections */
+  --color-pastel: #F4F1EA;
+ 
+}
+
+/* ========== GLOBAL BACKGROUND ========== */
+html,
+body {
+  background-color: #ffffff;
+  min-height: 100%;
+}
+
+/* Existing animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.fade-up.in {
+  opacity: 1;
+  transform: none;
+}
