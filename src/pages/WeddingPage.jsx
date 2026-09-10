@@ -303,7 +303,7 @@ img("Chaitrali_Shubham/SHA09951.webp"),
       "What stood out was how naturally they moved through it all. Whether it was laughter during the smaller moments or the quiet pauses they shared, everything felt real. It wasn’t about the scale or the setup, but about how present they were with each other and everyone around them."
     ],
     images: [
-  img("portfolio/Sanmay_Aishwarya.jpeg"),
+  img("portfolio/Sanmay_Aishwarya.webp"),
   img("Aishwarya_Sanmay/Couple2.webp"),
 
 img("Aishwarya_Sanmay/Couple18.webp"),
