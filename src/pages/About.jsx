@@ -68,7 +68,7 @@ const About = () => {
       </section>
 
       {/* ─── OUR STORY ────────────────────────────────────────────── */}
-      <section ref={storyRef} className="bg-white py-[clamp(80px,10vw,140px)] px-6 overflow-hidden">
+    <section ref={storyRef} className="bg-white py-0 px-6 overflow-hidden">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className={`relative transition-all duration-1000 ${storyInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
             <div className="relative z-10 overflow-hidden shadow-2xl">
@@ -87,7 +87,7 @@ const About = () => {
           </div>
 
           <div className={`transition-all duration-1000 delay-300 ${storyInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-            <span className="text-[0.7rem] tracking-[0.3em] uppercase text-[#c9a84c] mb-4 block">Our Legacy</span>
+            <span className="text-[0.7rem] tracking-[0.3em] uppercase text-[#c9a84c] mt-4 block">Our Legacy</span>
             <h2 className="font-['Cormorant_Garamond'] text-[clamp(2.2rem,4vw,3.5rem)] font-light leading-tight mb-8">
               Documenting Love <br /><em>With Absolute Sincerity</em>
             </h2>
@@ -101,7 +101,7 @@ const About = () => {
 
       {/* ─── PHILOSOPHY ───────────────────────────────────────────── */}
       <section ref={valRef} className="bg-white pt-[clamp(24px,3vw,48px)] pb-[clamp(80px,10vw,130px)] px-6">
-        <div className="max-w-[1200px] mx-auto text-center mb-16">
+        <div className="max-w-[1200px] mx-auto text-center">
           <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4vw,3.5rem)] font-light">Why Choose Us?</h2>
         </div>
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200 border border-gray-200">

@@ -142,7 +142,7 @@ const portfolioGrid = [
   { src: img("Web Gallery/img5013.webp") }, { src: img("Web Gallery/img5014.webp") },
   { src: img("Web Gallery/img5015.webp") }, { src: img("Web Gallery/img5016.webp") },
   { src: img("Web Gallery/img5017.webp") }, { src: img("Web Gallery/img5018.webp") },
-  { src: img("Web Gallery/img5019.webp") }, { src: img("Web Gallery/port.jpeg") },
+  { src: img("Web Gallery/img5019.webp") }, { src: img("Web Gallery/port.webp") },
 ];
 
 const featured = [
@@ -579,50 +579,51 @@ export default function Home() {
 
       <LazySection rootMargin="300px">
         {(isNear) => (
-          <section ref={featRef} className="bg-white py-[clamp(60px,10vw,80px)] px-[clamp(24px,5vw,60px)] border-y border-black/5">
-            <div className="max-w-[1400px] mx-auto">
-              <div className="text-center px-6 pb-[clamp(40px,5vw,60px)]">
-                <h2 className="font-cormorant text-[clamp(2rem,3.5vw,3.2rem)] font-light text-[#1a1a1a]">
+          <section
+            ref={featRef}
+            className="bg-white py-[clamp(60px,10vw,100px)] px-[clamp(24px,6vw,80px)] overflow-hidden border-y border-black/5"
+          >
+            <div className="max-w-[1320px] mx-auto">
+              <div className="text-center px-6 mb-5">
+                <h2 className="font-cormorant text-[clamp(2.5rem,6vw,4.5rem)] font-light text-[#1a1a1a]">
                   FEATURED WEDDINGS
                 </h2>
-                <div className="w-10 h-[1px] bg-[#c9a84c] mx-auto mt-6" />
+                <div className="w-10 h-[1px] bg-[#c9a84c] mx-auto mt-4" />
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12 lg:gap-x-10 lg:gap-y-16 featured-grid">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[clamp(24px,4vw,40px)]">
                 {featured.map((f, i) => (
                   <Link
                     key={i}
                     to={`/wedding/${f.slug}`}
                     state={{ from: location }}
-                    className={`group fade-up flex flex-col ${featInView ? `in d${i + 1}` : ""}`}
+                    className={`w-full group fade-up ${featInView ? `in d${i + 1}` : ""}`}
                   >
-                    <div className="relative w-full aspect-[16/12] mb-5 overflow-hidden bg-white shadow-sm rounded-sm">
+                    <div className="relative aspect-video overflow-hidden rounded-sm bg-[#1a1a1a] mb-5 shadow-sm">
                       <img
                         src={f.img || f.cover}
                         alt={f.couple}
                         loading="lazy"
                         decoding="async"
-                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
                     </div>
 
-                    <div className="text-left">
-                      <h3 className="font-cormorant text-[clamp(1.5rem,2vw,2rem)] font-medium text-[#1a1a1a] mb-1.5 transition-colors group-hover:text-[#c9a84c]">
-                        {f.couple}
-                      </h3>
-                      <p className="font-jost text-[0.65rem] tracking-[0.2em] uppercase text-gray-400">
-                        {f.location}
-                      </p>
-                    </div>
+                    <h3 className="font-cormorant text-[1.45rem] text-[#1a1a1a] transition-colors duration-400 group-hover:text-[#c9a84c]">
+                      {f.couple}
+                    </h3>
+                    <p className="font-jost text-[0.7rem] tracking-[0.2em] uppercase text-[#999] mt-0.5">
+                      {f.location}
+                    </p>
                   </Link>
                 ))}
               </div>
 
-              <div className="text-center mt-14 md:mt-20">
+              <div className="text-center mt-16">
                 <a
                   href="/portfolio"
-                  className="font-jost text-[0.72rem] tracking-[0.28em] uppercase border-b border-[#aaa] pb-0.5 hover:text-[#c9a84c] hover:border-[#c9a84c] transition-colors"
+                  className="font-jost text-[0.75rem] tracking-[0.3em] uppercase border-b border-[#1a1a1a] pb-1 hover:text-[#c9a84c] hover:border-[#c9a84c] transition-all"
                 >
                   See All Stories
                 </a>
