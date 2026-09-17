@@ -90,7 +90,7 @@ function ProgressiveImg({ src, alt = "", shouldLoad = true, isMasonry = false })
           loading="lazy"
           decoding="async"
           onLoad={() => setLoaded(true)}
-          className={`block w-full ${isMasonry ? "h-auto object-cover transition-all duration-700 ease-out group-hover:scale-[1.03]" : "h-full object-cover transition-all duration-1000 ease-out"} ${loaded ? "opacity-100 scale-100" : "opacity-0 scale-105"}`}
+          className={`block w-full ${isMasonry ? "h-auto object-cover transition-all duration-700 ease-out group-hover:scale-[1.03]" : "absolute inset-0 h-full object-cover transition-all duration-1000 ease-out"} ${loaded ? "opacity-100 scale-100" : "opacity-0 scale-105"}`}
         />
       )}
     </div>
@@ -509,14 +509,14 @@ export default function Home() {
 
       <LazySection rootMargin="200px">
         {(isNear) => (
-          <section ref={aboutRef} className="grid grid-cols-1 md:grid-cols-2 gap-[clamp(40px,8vw,120px)] items-center px-[clamp(24px,8vw,120px)] py-[clamp(80px,10vw,140px)] bg-white about-grid">
-            <div className={`hover-zoom fade-up ${aboutInView ? "in" : ""} relative aspect-[3/4]`}>
+          <section ref={aboutRef} className="grid grid-cols-1 md:grid-cols-2 gap-[clamp(40px,8vw,120px)] md:items-stretch px-[clamp(24px,8vw,120px)] py-[clamp(80px,10vw,140px)] bg-white about-grid">
+            <div className={`hover-zoom fade-up ${aboutInView ? "in" : ""} relative min-h-[420px] h-[420px] md:h-auto`}>
               <ProgressiveImg src={aboutImg} alt="Wedding story" shouldLoad={isNear} />
-              <div className="absolute bottom-[clamp(16px,2.5vw,28px)] right-[clamp(16px,2.5vw,28px)] bg-[#F4F1EA] px-5 py-3.5 shadow-sm">
+              <div className="absolute bottom-[clamp(16px,2.5vw,28px)] right-[clamp(16px,2.5vw,28px)] bg-[#F4F1EA] px-5 py-3.5 shadow-sm z-10">
                 <p className="font-jost text-[0.68rem] tracking-[0.28em] uppercase text-[#888]">Est. 2019</p>
               </div>
             </div>
-            <div className={`fade-up ${aboutInView ? "in" : ""}`}>
+            <div className={`fade-up ${aboutInView ? "in" : ""} flex flex-col justify-center`}>
               <h2 className="font-cormorant text-[clamp(2rem,3.5vw,3.4rem)] font-light leading-tight text-[#1a1a1a] mb-8">
                 Our Approach to Wedding Photography & Cinematic Films
               </h2>
