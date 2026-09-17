@@ -672,7 +672,7 @@ export default function Home() {
                 <p className="font-jost text-[0.65rem] tracking-[0.3em] uppercase text-[#c9a84c] mb-3">
                   Kind Words
                 </p>
-                <h2 className="font-cormorant text-[clamp(2rem,3.5vw,3.2rem)] font-light text-[#1a1a1a]">
+                <h2 className="font-cormorant text-[clamp(1.5rem,6vw,3.5rem)] font-light text-[#1a1a1a]">
                   CLIENT TESTIMONIALS
                 </h2>
                 <div className="w-10 h-[1px] bg-[#c9a84c] mx-auto mt-6" />
