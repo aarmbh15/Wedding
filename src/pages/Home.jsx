@@ -638,7 +638,7 @@ export default function Home() {
           <section className="bg-[#F4F1EA] py-[clamp(60px,10vw,100px)] px-[clamp(24px,6vw,80px)] overflow-hidden">
             <div className="max-w-[1320px] mx-auto">
               <div className="text-center px-6 mb-5">
-                <h2 className="font-cormorant text-[clamp(2.5rem,6vw,4.5rem)] font-light text-[#1a1a1a]">
+                <h2 className="font-cormorant text-[clamp(2.5rem,6vw,3.5rem)] font-light text-[#1a1a1a]">
                   FILMS
                 </h2>
                 <div className="w-10 h-[1px] bg-[#c9a84c] mx-auto mt-4" />
