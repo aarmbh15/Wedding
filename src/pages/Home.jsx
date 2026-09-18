@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Play, Pause, Volume2, VolumeX, Maximize, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 
-import heroImg1 from "../assets/Lap/1.webp";
+// import heroImg1 from "../assets/Lap/1.webp";
 import heroImg2 from "../assets/Lap/2.webp";
 import heroImg3 from "../assets/Lap/3.webp";
 import heroImg5 from "../assets/Lap/5.webp";
@@ -14,7 +14,7 @@ import heroImg8 from "../assets/Lap/8.webp";
 import heroImg10 from "../assets/Lap/10.webp";
 import heroImg11 from "../assets/Lap/11.webp";
 import heroImg12 from "../assets/Lap/12.webp";
-import heroImg13 from "../assets/Lap/13.webp";
+// import heroImg13 from "../assets/Lap/13.webp";
 import heroImg14 from "../assets/Lap/14.webp";
 
 import heroMobile1 from "../assets/Mobile/1.webp";
@@ -509,7 +509,7 @@ export default function Home() {
 
       <LazySection rootMargin="200px">
         {(isNear) => (
-          <section ref={aboutRef} className="grid grid-cols-1 md:grid-cols-2 gap-[clamp(40px,8vw,120px)] md:items-stretch px-[clamp(24px,8vw,120px)] py-[clamp(80px,10vw,140px)] bg-white about-grid">
+          <section ref={aboutRef} className="mt-0 grid grid-cols-1 md:grid-cols-2 gap-[clamp(40px,8vw,120px)] md:items-stretch px-[clamp(24px,8vw,120px)] py-[clamp(48px,6vw,90px)] bg-white about-grid">
             <div className={`hover-zoom fade-up ${aboutInView ? "in" : ""} relative min-h-[420px] h-[420px] md:h-auto`}>
               <ProgressiveImg src={aboutImg} alt="Wedding story" shouldLoad={isNear} />
               <div className="absolute bottom-[clamp(16px,2.5vw,28px)] right-[clamp(16px,2.5vw,28px)] bg-[#F4F1EA] px-5 py-3.5 shadow-sm z-10">
@@ -538,15 +538,15 @@ export default function Home() {
 
       <LazySection rootMargin="400px">
         {(isNear) => (
-          <section ref={gridRef} className="bg-[#F4F1EA] pb-[clamp(60px,8vw,100px)]">
-            <div className="text-center px-6 pb-[clamp(32px,5vw,60px)]">
+          <section ref={gridRef} className="mt-0 bg-[#F4F1EA] pt-[clamp(40px,5vw,64px)] pb-[clamp(36px,5vw,64px)]">
+            <div className="text-center px-6 pb-[clamp(20px,3vw,36px)]">
               <h2 className="font-cormorant text-[clamp(2.2rem,4vw,3.5rem)] font-light text-[#1a1a1a] relative top-8">
                 PORTFOLIO
               </h2>
               <p className="font-cormorant italic text-[clamp(1rem,1.5vw,1.25rem)] text-[#666] mt-10 max-w-[700px] mx-auto leading-relaxed">
                 A collection of beautifully captured wedding moments, emotions and celebrations.
               </p>
-              <div className="w-10 h-[1px] bg-[#c9a84c] mx-auto mt-6" />
+              <div className="w-10 h-[1px] bg-[#c9a84c] mx-auto mt-2" />
             </div>
 
             <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-3 md:gap-4 px-3 md:px-5">
@@ -568,7 +568,7 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="text-center mt-[clamp(32px,4vw,56px)]">
+            <div className="text-center mt-[clamp(24px,3vw,40px)]">
               <a href="/portfolio" className="font-jost text-[0.75rem] tracking-[0.3em] uppercase border-b border-[#1a1a1a] pb-0.5 hover:text-[#c9a84c] hover:border-[#c9a84c] transition-colors">
                 View Full Portfolio
               </a>
@@ -581,7 +581,7 @@ export default function Home() {
         {(isNear) => (
           <section
             ref={featRef}
-            className="bg-white py-[clamp(60px,10vw,100px)] px-[clamp(24px,6vw,80px)] overflow-hidden border-y border-black/5"
+            className="mt-0 bg-white py-[clamp(40px,6vw,70px)] px-[clamp(24px,6vw,80px)] overflow-hidden border-y border-black/5"
           >
             <div className="max-w-[1320px] mx-auto">
               <div className="text-center px-6 mb-5">
@@ -620,7 +620,7 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="text-center mt-16">
+              <div className="text-center mt-2">
                 <a
                   href="/portfolio"
                   className="font-jost text-[0.75rem] tracking-[0.3em] uppercase border-b border-[#1a1a1a] pb-1 hover:text-[#c9a84c] hover:border-[#c9a84c] transition-all"
@@ -635,10 +635,10 @@ export default function Home() {
 
       <LazySection rootMargin="300px">
         {(isNear) => (
-          <section className="bg-[#F4F1EA] py-[clamp(60px,10vw,100px)] px-[clamp(24px,6vw,80px)] overflow-hidden">
+          <section className="mt-0 bg-[#F4F1EA] py-[clamp(40px,6vw,70px)] px-[clamp(24px,6vw,80px)] overflow-hidden">
             <div className="max-w-[1320px] mx-auto">
               <div className="text-center px-6 mb-5">
-                <h2 className="font-cormorant text-[clamp(2.5rem,6vw,3.5rem)] font-light text-[#1a1a1a]">
+                <h2 className="font-cormorant text-[clamp(2.5rem,6vw,4.5rem)] font-light text-[#1a1a1a]">
                   FILMS
                 </h2>
                 <div className="w-10 h-[1px] bg-[#c9a84c] mx-auto mt-4" />
@@ -654,7 +654,7 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="text-center mt-16">
+              <div className="text-center mt-2">
                 <Link to="/films" className="font-jost text-[0.75rem] tracking-[0.3em] uppercase border-b border-[#1a1a1a] pb-1 hover:text-[#c9a84c] hover:border-[#c9a84c] transition-all">
                   Explore All Films
                 </Link>
@@ -666,16 +666,16 @@ export default function Home() {
 
       <LazySection rootMargin="300px">
         {(isNear) => (
-          <section className="bg-white py-[clamp(60px,10vw,100px)] overflow-hidden">
+          <section className="mt-0 bg-white py-[clamp(40px,6vw,70px)] overflow-hidden">
             <div className="max-w-[1320px] mx-auto px-[clamp(24px,6vw,80px)]">
-              <div className="text-center pb-[clamp(40px,6vw,70px)]">
+              <div className="text-center pb-[clamp(28px,4vw,48px)]">
                 <p className="font-jost text-[0.65rem] tracking-[0.3em] uppercase text-[#c9a84c] mb-3">
                   Kind Words
                 </p>
                 <h2 className="font-cormorant text-[clamp(1.5rem,6vw,3.5rem)] font-light text-[#1a1a1a]">
                   CLIENT TESTIMONIALS
                 </h2>
-                <div className="w-10 h-[1px] bg-[#c9a84c] mx-auto mt-6" />
+                <div className="w-10 h-[1px] bg-[#c9a84c] mx-auto mt-2" />
               </div>
             </div>
 

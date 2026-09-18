@@ -68,7 +68,7 @@ const About = () => {
       </section>
 
       {/* ─── OUR STORY ────────────────────────────────────────────── */}
-    <section ref={storyRef} className="bg-white py-0 px-6 overflow-hidden">
+    <section ref={storyRef} className="mt-16 bg-white py-0 px-6 overflow-hidden">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className={`relative transition-all duration-1000 ${storyInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
             <div className="relative z-10 overflow-hidden shadow-2xl">
@@ -100,7 +100,7 @@ const About = () => {
       </section>
 
       {/* ─── PHILOSOPHY ───────────────────────────────────────────── */}
-      <section ref={valRef} className="bg-white pt-[clamp(24px,3vw,48px)] pb-[clamp(80px,10vw,130px)] px-6">
+      <section ref={valRef} className="mt-16 bg-white pt-[clamp(16px,2vw,32px)] pb-[clamp(48px,6vw,80px)] px-6">
         <div className="max-w-[1200px] mx-auto text-center">
           <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4vw,3.5rem)] font-light">Why Choose Us?</h2>
         </div>
@@ -117,7 +117,7 @@ const About = () => {
 
       {/* ─── CTA ──────────────────────────────────────────────────── */}
       <section
-        className="relative py-[clamp(52px,7vw,80px)] px-[clamp(24px,6vw,80px)] text-center overflow-hidden bg-cover bg-center bg-no-repeat"
+        className="mt-16 relative py-[clamp(36px,5vw,56px)] px-[clamp(24px,6vw,80px)] text-center overflow-hidden bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${BannerImage})` }}
       >
         <div className="absolute inset-0 bg-black/60" />

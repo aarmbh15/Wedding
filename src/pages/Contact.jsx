@@ -177,7 +177,7 @@ const Contact = () => {
       </div>
 
       {/* ─── MAIN CONTACT SECTION ────────────────────────────────── */}
-      <section className="py-20 lg:py-32 px-6 bg-white">
+      <section className="py-8 px-6 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
           <div ref={formRef} className={`lg:col-span-7 transition-all duration-1000 ${formInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light mb-12">Inquiry Form</h2>
@@ -275,7 +275,7 @@ const Contact = () => {
       {/* ─── FAQ SECTION ─────────────────────────────────────────── */}
      <section
   ref={faqRef}
-  className="pt-0 pb-20 lg:pt-8 lg:pb-32 bg-white px-6"
+  className="py-8 bg-white px-6"
 >
   <div className="max-w-3xl mx-auto">
     <div className="text-center mb-16">
