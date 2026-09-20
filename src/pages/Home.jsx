@@ -136,19 +136,22 @@ const portfolioGrid = [
   { src: img("Web Gallery/img5001.webp") }, { src: img("Web Gallery/img5002.webp") },
   { src: img("Web Gallery/img5003.webp") }, { src: img("Web Gallery/img5004.webp") },
   { src: img("Web Gallery/img5005.webp") }, { src: img("Web Gallery/img5007.webp") },
-  { src: img("Web Gallery/img5008.webp") }, { src: img("Web Gallery/img5009.webp") },
+  // { src: img("Web Gallery/img5008.webp") },
+  { src: img("Web Gallery/img5009.webp") },
   { src: img("Web Gallery/img5010.webp") }, { src: img("Web Gallery/img5006.webp") },
   { src: img("Web Gallery/img5011.webp") }, { src: img("Web Gallery/img5012.webp") },
   { src: img("Web Gallery/img5013.webp") }, { src: img("Web Gallery/img5014.webp") },
-  { src: img("Web Gallery/img5015.webp") }, { src: img("Web Gallery/img5016.webp") },
+  // { src: img("Web Gallery/img5015.webp") },
+  { src: img("Web Gallery/port.webp") }, 
+  { src: img("Web Gallery/img5016.webp") },
   { src: img("Web Gallery/img5017.webp") }, { src: img("Web Gallery/img5018.webp") },
-  { src: img("Web Gallery/img5019.webp") }, { src: img("Web Gallery/port.webp") },
+  { src: img("Web Gallery/img5019.webp") }, 
 ];
 
 const featured = [
-  { slug: "Anuja_Shubhang", couple: "Shubhang & Anuja", location: "Pune, Maharashtra", date: "Month Year", category: "Tag", cover: img("portfolio/Anuja_Shubhang.webp") },
-  { slug: "Atharva_Haritha", couple: "Atharva & Harita", location: "Pune, Maharashtra", date: "Month Year", category: "Tag", cover: img("portfolio/Atharva_Harita.webp") },
-  { slug: "Atish_Shweta", couple: "Atish & Shweta", location: "Pune, Maharashtra", date: "Month Year", category: "Tag", cover: img("portfolio/Atish_Shweta.webp") },
+  { slug: "Anuja_Shubhang", couple: "Shubhang & Anuja", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Anuja_Shubhang.webp") },
+  { slug: "Atharva_Haritha", couple: "Atharva & Harita", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Atharva_Harita.webp") },
+  { slug: "Atish_Shweta", couple: "Atish & Shweta", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Atish_Shweta.webp") },
 ];
 
 const testimonials = [
@@ -620,14 +623,14 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="text-center mt-2">
-                <a
-                  href="/portfolio"
-                  className="font-jost text-[0.75rem] tracking-[0.3em] uppercase border-b border-[#1a1a1a] pb-1 hover:text-[#c9a84c] hover:border-[#c9a84c] transition-all"
-                >
-                  See All Stories
-                </a>
-              </div>
+          <div className="text-center mt-12">
+  <a
+    href="/portfolio"
+    className="font-jost text-[0.75rem] tracking-[0.3em] uppercase border-b border-[#1a1a1a] pb-1 hover:text-[#c9a84c] hover:border-[#c9a84c] transition-all"
+  >
+    See All Stories
+  </a>
+</div>
             </div>
           </section>
         )}
@@ -638,7 +641,7 @@ export default function Home() {
           <section className="mt-0 bg-[#F4F1EA] py-[clamp(40px,6vw,70px)] px-[clamp(24px,6vw,80px)] overflow-hidden">
             <div className="max-w-[1320px] mx-auto">
               <div className="text-center px-6 mb-5">
-                <h2 className="font-cormorant text-[clamp(2.5rem,6vw,4.5rem)] font-light text-[#1a1a1a]">
+                <h2 className="font-cormorant text-[clamp(2.5rem,6vw,3.5rem)] font-light text-[#1a1a1a]">
                   FILMS
                 </h2>
                 <div className="w-10 h-[1px] bg-[#c9a84c] mx-auto mt-4" />
@@ -646,15 +649,15 @@ export default function Home() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[clamp(24px,4vw,40px)]">
                 {[
-                  { couple: "Rahul & Esha", url: "https://youtu.be/6-2JG29kYxU", id: "6-2JG29kYxU", location: "Pune, Maharashtra", thumbnail: ThumbRahulEsha },
-                  { couple: "Harjot & Shruti", url: "https://youtu.be/DaO8vn9w7zo", id: "DaO8vn9w7zo", location: "Pune, Maharashtra", thumbnail: ThumbHarjotShruti },
-                  { couple: "Bhakti & Saurabh", url: "https://youtu.be/tHZ2RwYCdpQ", id: "tHZ2RwYCdpQ", location: "Jodhpur, Rajasthan", thumbnail: ThumbBhaktiSaurabh },
+                  { couple: "Rahul & Esha", url: "https://youtu.be/6-2JG29kYxU", id: "6-2JG29kYxU", location: "Fort JadhavGADH, Pune, Maharashtra", thumbnail: ThumbRahulEsha },
+                  { couple: "Harjot & Shruti", url: "https://youtu.be/DaO8vn9w7zo", id: "DaO8vn9w7zo", location:  "The Orchid Hotel, Pune", thumbnail: ThumbHarjotShruti },
+                  { couple: "Bhakti & Saurabh", url: "https://youtu.be/tHZ2RwYCdpQ", id: "tHZ2RwYCdpQ", location: "Pratap Niwas Palace, Jodhpur, Rajasthan", thumbnail: ThumbBhaktiSaurabh },
                 ].map((film, i) => (
                   <FilmCard key={i} film={film} onSelect={setSelectedFilm} />
                 ))}
               </div>
 
-              <div className="text-center mt-2">
+              <div className="text-center mt-12">
                 <Link to="/films" className="font-jost text-[0.75rem] tracking-[0.3em] uppercase border-b border-[#1a1a1a] pb-1 hover:text-[#c9a84c] hover:border-[#c9a84c] transition-all">
                   Explore All Films
                 </Link>

@@ -22,13 +22,14 @@ const weddings = [
   { slug: "abhimanyu-manisha", couple: "Abhimanyu & Manisha", location: "Marigold Banquets 'N' Conventions, Pune", date: "November 2024", category: "Coastal", cover: img("portfolio/Abhimanyu_Manisha.webp") },
   { slug: "Chaitrali_Shubham", couple: "Shubham & Chaitraly", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Chaitraly_Shubham.webp") },
 ];
+
 function LazyImg({ src, alt }) {
   const ref = useRef(null);
   const [load, setLoad] = useState(false);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    const el = ref.current;
+    const el = ref.current;  
     if (!el) return;
     const obs = new IntersectionObserver(
       ([e]) => { 

@@ -29,6 +29,10 @@ const socialLinks = [
   { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/tiltshiftpicture" },
 ];
 
+// Google Maps embed URL — swap the query for your exact studio address / place ID
+const mapEmbedUrl =
+  "https://www.google.com/maps?q=Bunglow%20no%206%2C%20Periwinkle%20Society%2C%20Near%20Yogi%20park%20Baner%2C%20Pune%20411045&output=embed";
+
 const faqData = [
   {
     q: "How is your work different from others?",
@@ -178,21 +182,25 @@ const Contact = () => {
 
       {/* ─── MAIN CONTACT SECTION ────────────────────────────────── */}
       <section className="py-8 px-6 bg-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
-          <div ref={formRef} className={`lg:col-span-7 transition-all duration-1000 ${formInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-stretch">
+          {/* LEFT: Form */}
+          <div
+            ref={formRef}
+            className={`lg:col-span-7 flex flex-col h-full transition-all duration-1000 ${formInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+          >
             <h2 className="font-['Cormorant_Garamond'] text-4xl md:text-5xl font-light mb-12">Inquiry Form</h2>
-            
+
             {submitted ? (
-              <div className="bg-[#FDFCF9] p-12 text-center border border-[#c9a84c]/20 shadow-sm">
+              <div className="bg-[#FDFCF9] p-12 text-center border border-[#c9a84c]/20 shadow-sm flex-1 flex flex-col items-center justify-center">
                 <span className="text-4xl block mb-4">✨</span>
                 <h3 className="font-['Cormorant_Garamond'] text-2xl mb-2">Thank You</h3>
                 <p className="text-gray-500 font-light">Your inquiry has reached us. We'll be in touch very soon.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-10">
+              <form onSubmit={handleSubmit} className="space-y-10 flex-1 flex flex-col">
                 {/* Honeypot field for bot protection */}
                 <input type="text" name="honeypot" style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                   <div className="group">
                     <label className="text-[0.65rem] uppercase tracking-widest text-[#c9a84c]">Your Name</label>
@@ -220,13 +228,17 @@ const Contact = () => {
                   <input type="text" name="venue" className={inputClasses} placeholder="Baner, Pune..." />
                 </div>
 
-                <div className="group">
+                <div className="group flex-1 flex flex-col">
                   <label className="text-[0.65rem] uppercase tracking-widest text-[#c9a84c]">Event Details</label>
-                  <textarea name="event_details" className={inputClasses + " resize-none"} placeholder="Functions, Timings and approx guest count..." />
+                  <textarea
+                    name="event_details"
+                    className={inputClasses + " resize-none flex-1 min-h-[120px]"}
+                    placeholder="Functions, Timings and approx guest count..."
+                  />
                 </div>
-                
-                <button 
-                  type="submit" 
+
+                <button
+                  type="submit"
                   disabled={loading}
                   className="w-full md:w-auto px-12 py-5 bg-[#c9a84c] text-white text-[0.7rem] uppercase tracking-[0.3em] hover:bg-[#2D2D2D] transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
                 >
@@ -241,7 +253,8 @@ const Contact = () => {
             )}
           </div>
 
-          <div className="lg:col-span-5 space-y-12">
+          {/* RIGHT: Studio info + Map + Socials */}
+          <div className="lg:col-span-5 flex flex-col h-full">
             <div className="bg-[#F4F1EA] p-10 md:p-14 rounded-2xl">
               <h3 className="font-['Cormorant_Garamond'] text-2xl mb-6 italic">Visit our Studio</h3>
               <p className="text-gray-500 font-light leading-relaxed mb-8 text-[0.95rem]">
@@ -250,7 +263,19 @@ const Contact = () => {
               </p>
             </div>
 
-            <div className="px-4">
+            {/* Google Map box */}
+            <div className="mt-8 flex-1 min-h-[220px] rounded-2xl overflow-hidden border border-black/5 shadow-sm">
+              <iframe
+                title="Tilt Shift Pictures Studio Location"
+                src={mapEmbedUrl}
+                className="w-full h-full min-h-[220px] border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            </div>
+
+            <div className="px-4 mt-8">
               <h3 className="font-['Cormorant_Garamond'] text-xl mb-6">Social Portfolios</h3>
               <div className="flex flex-wrap gap-4">
                 {socialLinks.map(({ name, icon: Icon, href }) => (

@@ -70,21 +70,22 @@ const About = () => {
       {/* ─── OUR STORY ────────────────────────────────────────────── */}
     <section ref={storyRef} className="mt-16 bg-white py-0 px-6 overflow-hidden">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className={`relative transition-all duration-1000 ${storyInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
-            <div className="relative z-10 overflow-hidden shadow-2xl">
-              <img
-                src={AboutImage}
-                alt="Wedding Cinematography"
-                loading="lazy"
-                decoding="async"
-                className="w-full h-auto block"
-              />
-            </div>
-            <div className="absolute -top-6 -left-6 bg-[#c9a84c] text-white p-6 z-20">
-              <span className="font-['Cormorant_Garamond'] text-4xl block">6+</span>
-              <span className="text-[0.6rem] tracking-widest uppercase">Years</span>
-            </div>
-          </div>
+     <div className={`relative transition-all duration-1000 ${storyInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
+  <div className="relative z-10 overflow-hidden shadow-2xl">
+    <img
+      src={AboutImage}
+      alt="Wedding Cinematography"
+      loading="lazy"
+      decoding="async"
+      className="w-full h-auto block scale-[1.05] translate-x-[2%]"
+    />
+  </div>
+
+  <div className="absolute -top-6 -left-6 bg-[#c9a84c] text-white p-6 z-20">
+    <span className="font-['Cormorant_Garamond'] text-4xl block">6+</span>
+    <span className="text-[0.6rem] tracking-widest uppercase">Years</span>
+  </div>
+</div>
 
           <div className={`transition-all duration-1000 delay-300 ${storyInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
             <span className="text-[0.7rem] tracking-[0.3em] uppercase text-[#c9a84c] mt-4 block">Our Legacy</span>
@@ -102,7 +103,7 @@ const About = () => {
       {/* ─── PHILOSOPHY ───────────────────────────────────────────── */}
       <section ref={valRef} className="mt-16 bg-white pt-[clamp(16px,2vw,32px)] pb-[clamp(48px,6vw,80px)] px-6">
         <div className="max-w-[1200px] mx-auto text-center">
-          <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4vw,3.5rem)] font-light">Why Choose Us?</h2>
+          <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4vw,3.9rem)] font-light">Why Choose Us?</h2>
         </div>
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200 border border-gray-200">
           {philosophyItems.map((v, i) => (

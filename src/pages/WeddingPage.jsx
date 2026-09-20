@@ -26,7 +26,7 @@ const img = (path) => {
 const weddingData = {
   "amruta-amey": {
     couple: "Amruta & Amey",
-    location: "Pune, Maharashtra",
+    location: "Marigold Banquets 'N' Conventions, Pune",
     caption: [
       "Amruta & Amey’s wedding was a heartfelt Maharashtrian celebration, rooted in tradition and quiet elegance. The day unfolded with a gentle rhythm where every ritual felt meaningful, unhurried and deeply personal.",
 "From soft, intimate moments to bursts of laughter shared with loved ones, their wedding carried a warmth that stayed constant throughout. Nothing felt rushed, nothing felt staged, just real emotions, honest connections and a love that spoke for itself."
@@ -93,7 +93,7 @@ img("Amruta_Amey/ADM06939.webp"),
   },
   "abhimanyu-manisha": {
     couple: "Abhimanyu & Manisha",
-    location: "Pune, Maharashtra",
+    location: "Marigold Banquets 'N' Conventions, Pune",
     caption: [
       "Abhimanyu and Manisha’s wedding felt full of life from the very beginning. The haldi was filled with laughter and colour where everyone was completely in the moment and enjoying every second. As the celebrations moved ahead the baraat brought in a different kind of energy that pulled everyone together and turned it into a full celebration.",
       "When the ceremony began everything slowed down and felt calm and meaningful. In between it all they stayed present sharing real moments with their people. Nothing felt forced or planned it just flowed naturally. It was warm honest and truly a reflection of them."
@@ -128,7 +128,7 @@ img("Amruta_Amey/ADM06939.webp"),
   },
   "bhakti-sourabh": {
     couple: "Bhakti & Sourabh",
-    location: "Jodhpur, Rajasthan",
+    location: "Pratap Niwas Palace, Jodhpur, Rajasthan",
     caption: [
       "Bhakti and Sourabh’s wedding carried a royal charm that felt both grand and personal at the same time. Set against the heritage beauty of Jodhpur the celebrations moved effortlessly from intimate rituals to lively evenings filled with music and dance.",
       "There was a natural ease between them that showed in every moment whether it was quiet glances or carefree laughter with their people. Nothing felt overdone yet everything felt complete. It was a celebration full of warmth energy and connection that stayed consistent from start to finish."
@@ -224,7 +224,7 @@ img("Rohan_Preksha/HALDI_1824.webp"),
 },
   "Chaitrali_Shubham": {
     couple: "Chaitrali & Shubham",
-    location: "Pune, Maharashtra",
+    location: "Marigold Banquets 'N' Conventions, Pune",
     caption: [
       "Chaitrali and Shubham’s wedding had a rhythm of its own, steady, joyful, and full of heart. The celebrations felt close knit, with every ritual bringing people together in the most genuine way. There was laughter in the louder moments and a quiet kind of emotion that stayed in the background throughout.",
       "What stood out was how effortlessly everything came together. Nothing felt rushed or overdone. Just two people surrounded by their families, celebrating in a way that felt familiar, comforting, and truly their own."
@@ -297,7 +297,7 @@ img("Chaitrali_Shubham/SHA09951.webp"),
   },
   "Aishwarya_Sanmay": {
     couple: "Aishwarya & Sanmay",
-    location: "Pune, Maharashtra",
+    location: "Sorina Hills Resort, Khadakwasla, Pune",
     caption: [
       "Aishwarya and Sanmay’s wedding had a charm that felt easy and unforced. The early moments were playful and full of colour, with friends and family bringing in a kind of energy that stayed throughout. There was always something happening, yet it never felt overwhelming.",
       "What stood out was how naturally they moved through it all. Whether it was laughter during the smaller moments or the quiet pauses they shared, everything felt real. It wasn’t about the scale or the setup, but about how present they were with each other and everyone around them."
@@ -305,7 +305,6 @@ img("Chaitrali_Shubham/SHA09951.webp"),
     images: [
   img("portfolio/Sanmay_Aishwarya.webp"),
   img("Aishwarya_Sanmay/Couple2.webp"),
-
 img("Aishwarya_Sanmay/Couple18.webp"),
 img("Aishwarya_Sanmay/Couple29.webp"),
 img("Aishwarya_Sanmay/Couple37.webp"),
@@ -364,7 +363,7 @@ img("Aishwarya_Sanmay/Wedding1023.webp"),
   },
    "Atish_Shweta": {
     couple: "Atish & Shweta",
-    location: "Pune, Maharashtra",
+    location: "Marigold Banquets 'N' Conventions, Pune",
     caption: [
       "Atish and Shweta's wedding was filled with moments that kept everyone involved. One ritual led to another, family members stepped in with advice, laughter followed almost every tradition and there was always a reaction worth watching.",
       "Between all the ceremonies and celebrations, they found time to exchange glances that said more than the words around them."
@@ -392,7 +391,7 @@ img("Aishwarya_Sanmay/Wedding1023.webp"),
   img("Atish_Shweta/img4019.webp"),
   img("Atish_Shweta/img4020.webp"),
   img("Atish_Shweta/img4021.webp"),
-  img("Atish_Shweta/img4022.webp"),
+  img("Atish_Shweta/img4032.webp"),
   img("Atish_Shweta/img4023.webp"),
   img("Atish_Shweta/img4024.webp"),
   img("Atish_Shweta/img4025.webp"),
@@ -402,7 +401,6 @@ img("Aishwarya_Sanmay/Wedding1023.webp"),
   img("Atish_Shweta/img4029.webp"),
   img("Atish_Shweta/img4030.webp"),
   img("Atish_Shweta/img4031.webp"),
-  img("Atish_Shweta/img4032.webp"),
   img("Atish_Shweta/img4033.webp"),
   img("Atish_Shweta/img4034.webp"),
   img("Atish_Shweta/img4035.webp"),
@@ -413,12 +411,13 @@ img("Aishwarya_Sanmay/Wedding1023.webp"),
   img("Atish_Shweta/img4040.webp"),
   img("Atish_Shweta/img4041.webp"),
   img("Atish_Shweta/img4042.webp"),
+  img("Atish_Shweta/img4022.webp"),
   ]   
 },
 
   "Gaurav_Chinmaee": {
     couple: "Gaurav & Chinmaee",
-    location: "Pune, Maharashtra",
+    location: "Marigold Banquets 'N' Conventions, Pune",
     caption: [
       "Gaurav and Chinmaee's wedding in Pune was filled with warmth, laughter and moments shared with their closest people. From the bright haldi celebrations to the wedding ceremony, every part of the day felt joyful and relaxed.",
       "Surrounded by family and friends, they embraced each moment as it came, making the celebration feel genuine, memorable and truly their own."
@@ -467,7 +466,7 @@ img("Aishwarya_Sanmay/Wedding1023.webp"),
 
   "Raj_Suhasini": {
     couple: "Raj & Suhasini",
-    location: "Pune, Maharashtra",
+    location: "Marigold Banquets 'N' Conventions, Pune",
     caption: [
       "Raj and Suhasini's celebrations began with a cheerful haldi where family and friends filled the day with colour and laughter. The energy carried into the sangeet, with music, dancing and unforgettable performances.",
       "By the wedding day, the excitement had settled into meaningful moments, bringing everyone together for a celebration that felt complete from start to finish."
@@ -526,13 +525,13 @@ img("Aishwarya_Sanmay/Wedding1023.webp"),
 
   "Shruti_Harjot": {
     couple: "Shruti & Harjot",
-    location: "Pune, Maharashtra",
+    location: "The Orchid Hotel, Pune",
     caption: [
       "Harjot and Shruti's celebrations brought together three very different moods. The haldi was filled with cheerful moments and family traditions, while the sangeet gave everyone a reason to let loose and celebrate.",
       "By the wedding day, the pace had slowed, allowing them to take in each ritual, each glance and each moment shared with the people around them."
     ],
 images: [
-  img("portfolio/Shruti_Harjot.webp"),
+  img("Shruti_Harjot/img3051.webp"),
   img("Shruti_Harjot/img3001.webp"),
   img("Shruti_Harjot/img3002.webp"),
   img("Shruti_Harjot/img3003.webp"),
@@ -583,13 +582,13 @@ images: [
   img("Shruti_Harjot/img3048.webp"),
   img("Shruti_Harjot/img3049.webp"),
   img("Shruti_Harjot/img3050.webp"),
-  img("Shruti_Harjot/img3051.webp"),
+  img("Shruti_Harjot/img3057.webp"),
   img("Shruti_Harjot/img3052.webp"),
   img("Shruti_Harjot/img3053.webp"),
   img("Shruti_Harjot/img3054.webp"),
   img("Shruti_Harjot/img3055.webp"),
   img("Shruti_Harjot/img3056.webp"),
-  img("Shruti_Harjot/img3057.webp"),
+   img("portfolio/Shruti_Harjot.webp"),
   img("Shruti_Harjot/img3058.webp"),
   img("Shruti_Harjot/img3059.webp"),
   img("Shruti_Harjot/img3060.webp"),
@@ -600,7 +599,7 @@ images: [
   },  
   "Atharva_Haritha": {
     couple: "Atharva & Haritha",
-    location: "Pune, Maharashtra",
+    location: "Marigold Banquets 'N' Conventions, Pune",
     caption: [
       "Atharva and Haritha's wedding was a joyful celebration filled with laughter, family and meaningful moments. From the fun-filled haldi to the wedding ceremony, every part of the day felt warm and genuine.",
       "Surrounded by their loved ones, they enjoyed every moment together making it a beautiful wedding celebration in Pune that reflected who they are."
@@ -635,6 +634,7 @@ images: [
   img("Atharva_Haritha/img826.webp"),
   img("Atharva_Haritha/img827.webp"),
   img("Atharva_Haritha/img828.webp"),
+  img("Atharva_Haritha/img840.webp"),
   img("Atharva_Haritha/img829.webp"),
   img("Atharva_Haritha/img830.webp"),
   img("Atharva_Haritha/img831.webp"),
@@ -646,7 +646,7 @@ images: [
   img("Atharva_Haritha/img837.webp"),
   img("Atharva_Haritha/img838.webp"),
   img("Atharva_Haritha/img839.webp"),
-  img("Atharva_Haritha/img840.webp"),
+  
   img("Atharva_Haritha/img841.webp"),
   img("Atharva_Haritha/img842.webp"),
   img("Atharva_Haritha/img843.webp"),
@@ -665,7 +665,7 @@ images: [
 
   "Nina_Parth": {
     couple: "Nina & Parth",
-    location: "Pune, Maharashtra",
+    location: "Marigold Banquets 'N' Conventions, Pune",
     caption: [
       "Nina and Parth's wedding never had a quiet moment. The haldi was filled with fun, the wedding brought everyone together and the celebrations carried on well into the evening.",
       "Wherever you looked, there were people dancing, laughing and creating moments that made the entire wedding feel alive from start to finish."
@@ -689,6 +689,7 @@ images: [
   img("Nina_Parth/img1015.webp"),
   img("Nina_Parth/img1016.webp"),
   img("Nina_Parth/img1017.webp"),
+  img("Nina_Parth/img1036.webp"),
   img("Nina_Parth/img1018.webp"),
   img("Nina_Parth/img1019.webp"),
   img("Nina_Parth/img1020.webp"),
@@ -707,19 +708,18 @@ images: [
   img("Nina_Parth/img1033.webp"),
   img("Nina_Parth/img1034.webp"),
   img("Nina_Parth/img1035.webp"),
-  img("Nina_Parth/img1036.webp"),
  ]
   },
 
   "Anuja_Shubhang": {
     couple: "Anuja & Shubhang",
-    location: "Pune, Maharashtra",
+    location: "Marigold Banquets 'N' Conventions, Pune",
     caption: [
       "Shubhang and Anuja's celebrations started with a haldi where family members took centre stage, filling every moment with laughter and playful traditions.",
       "The sangeet brought a different energy, with performances, dancing and a packed dance floor. By the wedding day, the focus shifted to meaningful rituals, bringing everyone together for a celebration rooted in tradition."
     ],
 images: [
-  img("portfolio/Anuja_Shubhang.webp"),
+  img("Anuja_Shubhang/img709.webp"),
   img("Anuja_Shubhang/img701.webp"),
   img("Anuja_Shubhang/img702.webp"),
   img("Anuja_Shubhang/img703.webp"),
@@ -728,7 +728,7 @@ images: [
   img("Anuja_Shubhang/img706.webp"),
   img("Anuja_Shubhang/img707.webp"),
   img("Anuja_Shubhang/img708.webp"),
-  img("Anuja_Shubhang/img709.webp"),
+  img("portfolio/Anuja_Shubhang.webp"),
   img("Anuja_Shubhang/img710.webp"),
   img("Anuja_Shubhang/img711.webp"),
   img("Anuja_Shubhang/img712.webp"),
@@ -751,7 +751,6 @@ images: [
   img("Anuja_Shubhang/img729.webp"),
   img("Anuja_Shubhang/img730.webp"),
   img("Anuja_Shubhang/img731.webp"),
-  img("Anuja_Shubhang/img732.webp"),
   img("Anuja_Shubhang/img733.webp"),
   img("Anuja_Shubhang/img734.webp"),
   img("Anuja_Shubhang/img735.webp"),
@@ -785,6 +784,7 @@ images: [
   img("Anuja_Shubhang/img763.webp"),
   img("Anuja_Shubhang/img764.webp"),
   img("Anuja_Shubhang/img765.webp"),
+  img("Anuja_Shubhang/img732.webp"),
  ]
 } 
 
@@ -812,7 +812,7 @@ export default function WeddingPage() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Close lightbox on Escape key
+  // Close lightbox on Escape key / arrow navigation
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape") closeLightbox();
@@ -823,6 +823,14 @@ export default function WeddingPage() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen]);
 
+  // Lock body scroll behind the lightbox (and restore on unmount too,
+  // in case the component unmounts while the lightbox is open)
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
+
   const handleBack = () => {
     if (location.state?.from) navigate(location.state.from);
     else navigate("/");
@@ -831,12 +839,12 @@ export default function WeddingPage() {
   const openLightbox = (index) => {
     setCurrentIndex(index);
     setIsOpen(true);
-    document.body.style.overflow = 'hidden'; 
+    document.body.style.overflow = "hidden";
   };
 
   const closeLightbox = () => {
     setIsOpen(false);
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = "auto";
   };
 
   const nextImage = (e) => {
@@ -854,43 +862,56 @@ export default function WeddingPage() {
   const heroImage = wedding.images[0];
 
   return (
-    <div className="bg-white min-h-screen selection:bg-[#bba98a]/20">
+    <div className="bg-white min-h-screen selection:bg-[#bba98a]/20 overflow-x-hidden">
       <Helmet>
         <title>{wedding.couple} | TILT SHIFT Films</title>
       </Helmet>
 
       {/* Floating Navigation (Back Button) */}
-      <button 
+      <button
         onClick={handleBack}
-        className="fixed top-28 left-8 md:left-16 z-40 mix-blend-difference text-white font-sans text-[10px] tracking-[0.4em] uppercase hover:opacity-60 transition-opacity"
+        className="fixed top-5 left-4 sm:top-24 sm:left-8 md:top-28 md:left-16 z-40 mix-blend-difference text-white font-sans text-[9px] sm:text-[10px] tracking-[0.3em] sm:tracking-[0.4em] uppercase hover:opacity-60 transition-opacity"
       >
         ← Back
       </button>
 
       {/* 1. HERO SECTION */}
-      <section 
-        className="relative h-screen w-full flex items-center justify-center bg-cover bg-center bg-no-repeat overflow-hidden"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
-        <div className="absolute inset-0 bg-black/30"></div>
-        <div className="relative z-10 text-center px-6">
-          <p className="font-sans text-[11px] tracking-[0.5em] uppercase text-white/90 mb-4">
-            Wedding Story
-          </p>
-          <h1 className="font-serif text-white text-6xl md:text-8xl lg:text-9xl leading-none tracking-tight font-light">
-            {wedding.couple}
-          </h1>
+      <section className="relative w-full h-[100svh] min-h-[420px] max-h-[900px] overflow-hidden">
+        {/* Real <img> instead of a CSS background so the hero scales
+            correctly (object-cover) on every device / orientation,
+            including iOS Safari where 100vh + background-image can
+            misbehave. */}
+        {heroImage && (
+          <img
+            src={heroImage}
+            alt={`${wedding.couple} wedding hero`}
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+        )}
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="relative z-10 h-full flex items-center justify-center px-4 sm:px-6">
+          <div className="text-center max-w-full">
+            <p className="font-sans text-[9px] sm:text-[11px] tracking-[0.35em] sm:tracking-[0.5em] uppercase text-white/90 mb-3 sm:mb-4">
+              Wedding Story
+            </p>
+            <h1 className="font-serif text-white text-[13vw] leading-[1.05] sm:text-6xl sm:leading-none md:text-8xl lg:text-9xl tracking-tight font-light break-words">
+              {wedding.couple}
+            </h1>
+          </div>
         </div>
       </section>
 
       {/* 2. STORY DETAILS SECTION */}
-      <section className="max-w-4xl mx-auto px-6 py-24 md:py-32 text-center bg-white">
-        <span className="inline-block font-sans text-[10px] tracking-[0.4em] uppercase text-[#bba98a] mb-8 font-medium">
+      <section className="max-w-4xl mx-auto px-5 sm:px-6 py-16 sm:py-24 md:py-32 text-center bg-white">
+        <span className="inline-block font-sans text-[9px] sm:text-[8px] tracking-[0.3em] sm:tracking-[0.4em] uppercase text-[#bba98a] mb-6 sm:mb-8 font-medium">
           {wedding.location}
         </span>
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           {wedding.caption.map((para, i) => (
-            <p key={i} className="font-serif text-xl md:text-2xl leading-relaxed text-neutral-700 font-light italic">
+            <p
+              key={i}
+              className="font-serif text-base sm:text-xl md:text-2xl leading-relaxed text-neutral-700 font-light italic"
+            >
               {para}
             </p>
           ))}
@@ -898,11 +919,11 @@ export default function WeddingPage() {
       </section>
 
       {/* 3. DYNAMIC MASONRY GALLERY */}
-      <section className="max-w-full mx-auto px-1 pb-32 bg-[#F4F1EA]">
-        <div className="columns-2 sm:columns-2 lg:columns-3 xl:columns-4 gap-2 space-y-2">
+      <section className="max-w-full mx-auto px-1 pb-20 sm:pb-32 bg-[#F4F1EA]">
+        <div className="columns-2 sm:columns-2 md:columns-3 lg:columns-3 xl:columns-4 gap-1.5 sm:gap-2 space-y-1.5 sm:space-y-2">
           {wedding.images.map((src, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="break-inside-avoid w-full group cursor-pointer"
               onClick={() => openLightbox(index)}
             >
@@ -916,14 +937,24 @@ export default function WeddingPage() {
                     // Runtime safety net: if a resolved URL 404s on the
                     // live server, hide its card instead of showing a
                     // broken-image icon.
-                    const card = e.currentTarget.closest('.break-inside-avoid');
-                    if (card) card.style.display = 'none';
+                    const card = e.currentTarget.closest(".break-inside-avoid");
+                    if (card) card.style.display = "none";
                   }}
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500 flex items-center justify-center">
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-8 md:w-8 text-white stroke-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-white stroke-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -935,65 +966,83 @@ export default function WeddingPage() {
 
       {/* FULL-SCREEN LIGHTBOX POPUP */}
       {isOpen && (
-        <div 
+        <div
           className="fixed inset-0 z-[9999] bg-black flex items-center justify-center animate-in fade-in duration-300"
           onClick={closeLightbox}
         >
           {/* Close Button - Top Right */}
-          <button 
-            className="absolute top-6 right-6 md:top-10 md:right-10 border rounded-full text-white/70 hover:text-white transition-all z-[10000] p-2"
+          <button
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-10 md:right-10 border rounded-full text-white/70 hover:text-white transition-all z-[10000] p-1.5 sm:p-2"
             onClick={closeLightbox}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4 sm:h-5 sm:w-5 md:h-8 md:w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
 
           {/* Navigation Arrows */}
-          <button 
-            className="absolute left-4 md:left-8 text-white border rounded-full hover:text-white transition-all p-4 z-[10000]"
+          <button
+            className="absolute left-1 sm:left-4 md:left-8 text-white border rounded-full hover:text-white transition-all p-2 sm:p-4 z-[10000]"
             onClick={prevImage}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4 sm:h-5 sm:w-5 md:h-8 md:w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={0.5} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
 
-          <button 
-            className="absolute right-4 md:right-8 text-white border rounded-full hover:text-white transition-all p-4 z-[10000]"
+          <button
+            className="absolute right-1 sm:right-4 md:right-8 text-white border rounded-full hover:text-white transition-all p-2 sm:p-4 z-[10000]"
             onClick={nextImage}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4 sm:h-5 sm:w-5 md:h-8 md:w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={0.5} d="M9 5l7 7-7 7" />
             </svg>
           </button>
 
           {/* Image Container */}
-          <div className="w-full h-full flex items-center justify-center p-2 md:p-10 select-none">
-            <img 
-              src={wedding.images[currentIndex]} 
+          <div className="w-full h-full flex items-center justify-center p-2 sm:p-4 md:p-10 select-none">
+            <img
+              src={wedding.images[currentIndex]}
               className="max-w-full max-h-full object-contain animate-in zoom-in-95 duration-500"
               alt="Full screen view"
               onClick={(e) => e.stopPropagation()}
               onError={(e) => {
                 // Skip forward automatically if the lightbox lands on a
                 // broken image instead of showing a blank/broken frame.
-                e.currentTarget.style.display = 'none';
+                e.currentTarget.style.display = "none";
               }}
             />
           </div>
-          
-          {/* Image Counter (Optional but elegant) */}
-          <div className="absolute bottom-8 text-white/40 font-sans text-[10px] tracking-[0.2em] uppercase">
+
+          {/* Image Counter */}
+          <div className="absolute bottom-4 sm:bottom-8 text-white/40 font-sans text-[9px] sm:text-[10px] tracking-[0.2em] uppercase">
             {currentIndex + 1} / {wedding.images.length}
           </div>
         </div>
       )}
 
       {/* FOOTER */}
-      <footer className="py-20 border-t border-neutral-100 text-center">
-        <button 
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      <footer className="py-14 sm:py-20 border-t border-neutral-100 text-center">
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="font-sans text-[9px] tracking-[0.4em] uppercase text-neutral-400 hover:text-black transition-colors"
         >
           ↑ Back to top
