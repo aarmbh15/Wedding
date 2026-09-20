@@ -8,9 +8,9 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
 
 $servername = "localhost"; 
-$username = "u544665256_wedding"; 
-$password = "Tiltshift@1"; 
-$dbname = "u544665256_wedding"; 
+$username = "root"; 
+$password = ""; 
+$dbname = "contact_wedding"; 
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

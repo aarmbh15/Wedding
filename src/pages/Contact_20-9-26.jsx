@@ -93,8 +93,8 @@ const Contact = () => {
     try {
       // 1. DATABASE & EMAIL POST
       // ⚠️ Toggle these URLs depending on your environment (Local vs Live)
-    //   const response = await fetch('http://localhost/contact_wedding.php', { 
-      const response = await fetch('https://tiltshiftpictures.com/contact.php', {
+      const response = await fetch('http://localhost/contact_wedding.php', { 
+    //   const response = await fetch('https://tiltshiftpictures.com/contact.php', {
         method: 'POST',
         body: formData,
       });

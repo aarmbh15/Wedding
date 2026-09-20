@@ -3,8 +3,6 @@ import { Helmet } from "react-helmet-async";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Play, Pause, Volume2, VolumeX, Maximize, Quote, ChevronLeft, ChevronRight } from "lucide-react";
-import Swal from "sweetalert2";
-
 
 // import heroImg1 from "../assets/Lap/1.webp";
 import heroImg2 from "../assets/Lap/2.webp";
@@ -484,46 +482,9 @@ export default function Home() {
   const handlePopupSubmit = useCallback(async (e) => {
     e.preventDefault();
     setPopupLoading(true);
-
-    const formData = new FormData(e.target);
-
-    try {
-      const response = await fetch('https://tiltshiftpictures.com/contact.php', {
-        method: 'POST',
-        body: formData,
-      });
-
-      const data = await response.json();
-
-      if (data.status === "success") {
-        setPopupSubmitted(true);
-        Swal.fire({
-          title: 'Beautiful Moments Await.',
-          text: "Your inquiry has reached us. We'll be in touch very soon.",
-          icon: 'success',
-          confirmButtonColor: '#c9a84c',
-          confirmButtonText: 'Perfect'
-        });
-      } else {
-        Swal.fire({
-          title: 'Something went wrong.',
-          text: "We couldn't submit your inquiry. Please try again or email us directly at hello@tiltshiftpictures.com.",
-          icon: 'error',
-          confirmButtonColor: '#c9a84c'
-        });
-      }
-    } catch (error) {
-      console.error("Submission failed", error);
-      Swal.fire({
-        title: 'Connection Issue',
-        text: "Looks like there's a network error. Please try again or drop us an email.",
-        icon: 'warning',
-        confirmButtonColor: '#c9a84c',
-        confirmButtonText: 'Got it'
-      });
-    } finally {
-      setPopupLoading(false);
-    }
+    await new Promise(r => setTimeout(r, 1500));
+    setPopupLoading(false);
+    setPopupSubmitted(true);
   }, []);
 
   const compactInputClasses = "w-full py-2 bg-transparent border-b border-black/10 text-gray-800 text-[0.85rem] font-light focus:border-[#c9a84c] outline-none transition-all placeholder:text-gray-300";
@@ -745,18 +706,17 @@ export default function Home() {
               </div>
             ) : (
               <form onSubmit={handlePopupSubmit} className="space-y-5">
-                <input type="text" name="honeypot" style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div className="group"><label className="text-[0.6rem] uppercase tracking-widest text-[#c9a84c]">Your Name</label><input type="text" name="name" required className={compactInputClasses} placeholder="First & Last Name" /></div>
-                  <div className="group"><label className="text-[0.6rem] uppercase tracking-widest text-[#c9a84c]">Email Address</label><input type="email" name="email" required className={compactInputClasses} placeholder="email@example.com" /></div>
+                  <div className="group"><label className="text-[0.6rem] uppercase tracking-widest text-[#c9a84c]">Your Name</label><input type="text" required className={compactInputClasses} placeholder="First & Last Name" /></div>
+                  <div className="group"><label className="text-[0.6rem] uppercase tracking-widest text-[#c9a84c]">Email Address</label><input type="email" required className={compactInputClasses} placeholder="email@example.com" /></div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-                  <div className="group"><label className="text-[0.6rem] uppercase tracking-widest text-[#c9a84c]">Phone</label><input type="tel" name="phone" required className={compactInputClasses} placeholder="+91" /></div>
-                  <div className="group"><label className="text-[0.6rem] uppercase tracking-widest text-[#c9a84c]">Event Date</label><input type="date" name="event_date" className={compactInputClasses} /></div>
-                  <div className="group"><label className="text-[0.6rem] uppercase tracking-widest text-[#c9a84c]">Venue & City</label><input type="text" name="venue" className={compactInputClasses} placeholder="City, State" /></div>
+                  <div className="group"><label className="text-[0.6rem] uppercase tracking-widest text-[#c9a84c]">Phone</label><input type="tel" required className={compactInputClasses} placeholder="+91" /></div>
+                  <div className="group"><label className="text-[0.6rem] uppercase tracking-widest text-[#c9a84c]">Event Date</label><input type="date" className={compactInputClasses} /></div>
+                  <div className="group"><label className="text-[0.6rem] uppercase tracking-widest text-[#c9a84c]">Venue & City</label><input type="text" className={compactInputClasses} placeholder="City, State" /></div>
                 </div>
-                <div className="group"><label className="text-[0.6rem] uppercase tracking-widest text-[#c9a84c]">Event Details</label><textarea name="event_details" className={compactInputClasses + " resize-none"} placeholder="Functions, Timings, guest count..." rows="1" /></div>
-                <div className="group"><label className="text-[0.6rem] uppercase tracking-widest text-[#c9a84c]">Tell us your story</label><textarea name="story" className={compactInputClasses + " resize-none"} placeholder="Tell us about your vision..." rows="1" /></div>
+                <div className="group"><label className="text-[0.6rem] uppercase tracking-widest text-[#c9a84c]">Event Details</label><textarea className={compactInputClasses + " resize-none"} placeholder="Functions, Timings, guest count..." rows="1" /></div>
+                <div className="group"><label className="text-[0.6rem] uppercase tracking-widest text-[#c9a84c]">Tell us your story</label><textarea className={compactInputClasses + " resize-none"} placeholder="Tell us about your vision..." rows="1" /></div>
                 <div className="pt-2"><button type="submit" disabled={popupLoading} className="w-full sm:w-auto px-10 py-3 bg-[#c9a84c] text-white text-[0.7rem] uppercase tracking-[0.2em] hover:bg-[#2D2D2D] transition-colors disabled:opacity-50">{popupLoading ? "Sending..." : "Submit Inquiry"}</button></div>
               </form>
             )}
