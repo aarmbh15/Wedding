@@ -569,9 +569,12 @@ export default function Home() {
                 Having documented 400+ weddings across Pune, Mumbai, Goa, Bangalore and destination weddings across India, we focus on preserving memories in a way that lets every couple feel and relive their special day even after many years.
               </p>
               <div className="flex flex-wrap gap-6">
-                <a href="/portfolio" className="font-jost text-[0.75rem] tracking-[0.25em] uppercase border-b border-[#1a1a1a] pb-0.5 hover:text-[#c9a84c] hover:border-[#c9a84c] transition-colors">
-                  View Portfolio →
-                </a>
+                <Link
+  to="/portfolio"
+  className="font-jost text-[0.75rem] tracking-[0.25em] uppercase border-b border-[#1a1a1a] pb-0.5 hover:text-[#c9a84c] hover:border-[#c9a84c] transition-colors"
+>
+  View Portfolio →
+</Link>
               </div>
             </div>
           </section>
@@ -611,9 +614,12 @@ export default function Home() {
             </div>
 
             <div className="text-center mt-[clamp(24px,3vw,40px)]">
-              <a href="/portfolio" className="font-jost text-[0.75rem] tracking-[0.3em] uppercase border-b border-[#1a1a1a] pb-0.5 hover:text-[#c9a84c] hover:border-[#c9a84c] transition-colors">
-                View Full Portfolio
-              </a>
+             <Link
+  to="/portfolio"
+  className="font-jost text-[0.75rem] tracking-[0.3em] uppercase border-b border-[#1a1a1a] pb-0.5 hover:text-[#c9a84c] hover:border-[#c9a84c] transition-colors"
+>
+  View Full Portfolio
+</Link>
             </div>
           </section>
         )}
@@ -663,12 +669,12 @@ export default function Home() {
               </div>
 
           <div className="text-center mt-12">
-  <a
-    href="/portfolio"
-    className="font-jost text-[0.75rem] tracking-[0.3em] uppercase border-b border-[#1a1a1a] pb-1 hover:text-[#c9a84c] hover:border-[#c9a84c] transition-all"
-  >
-    See All Stories
-  </a>
+<Link
+  to="/portfolio"
+  className="font-jost text-[0.75rem] tracking-[0.3em] uppercase border-b border-[#1a1a1a] pb-1 hover:text-[#c9a84c] hover:border-[#c9a84c] transition-all"
+>
+  See All Stories
+</Link>
 </div>
             </div>
           </section>
