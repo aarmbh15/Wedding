@@ -193,34 +193,119 @@ img("Amruta_Amey/ADM06939.webp"),
 ]
   },
   "Rohan-preksha": {
-    couple: "Rohan & Preksha",
-    location: "Pushkar, Rajasthan",
-    caption: [
-      "Rohan and Preksha’s wedding felt like one long celebration where no one held back. The days were filled with colour, music, and constant movement with something happening in every corner. From playful haldi moments to laughter that carried through the mehendi, everything felt alive.",
-      "What made it special was how easily they blended into it all. Dancing with their friends, sharing jokes, and just enjoying the chaos around them. Even during the ceremony, there was a lightness that stayed. It felt fun, spontaneous and completely true to who they are."
-    ],
- images: [
-  img("portfolio/Rohan_Preksha.webp"),
-  img("Rohan_Preksha/COUPLE_3.webp"),
-img("Rohan_Preksha/COUPLE_8.webp"),
-img("Rohan_Preksha/COUPLE_13.webp"),
-img("Rohan_Preksha/COUPLE_18.webp"),
-img("Rohan_Preksha/COUPLE_24.webp"),
-img("Rohan_Preksha/COUPLE_38.webp"),
-img("Rohan_Preksha/COUPLE_45.webp"),
-img("Rohan_Preksha/COUPLE_234.webp"),
-img("Rohan_Preksha/COUPLE_236.webp"),
-img("Rohan_Preksha/COUPLE_246.webp"),
-img("Rohan_Preksha/HALDI_1278.webp"),
-img("Rohan_Preksha/HALDI_1289.webp"),
-img("Rohan_Preksha/HALDI_1294.webp"),
-img("Rohan_Preksha/HALDI_1314.webp"),
-img("Rohan_Preksha/HALDI_1366.webp"),
-img("Rohan_Preksha/HALDI_1416.webp"),
-img("Rohan_Preksha/HALDI_1486.webp"),
-img("Rohan_Preksha/HALDI_1619.webp"),
-img("Rohan_Preksha/HALDI_1824.webp"),
- ],
+  couple: "Rohan & Preksha",
+
+  location: "Pushkar, Rajasthan",
+
+  caption: [
+    "Rohan and Preksha’s wedding felt like one long celebration where no one held back. The days were filled with colour, music, and constant movement with something happening in every corner. From playful haldi moments to laughter that carried through the mehendi, everything felt alive.",
+
+    "What made it special was how easily they blended into it all. Dancing with their friends, sharing jokes, and just enjoying the chaos around them. Even during the ceremony, there was a lightness that stayed. It felt fun, spontaneous and completely true to who they are."
+  ],
+
+  images: [
+    img("portfolio/Rohan_Preksha.webp"),
+
+    img("Rohan_Preksha/COUPLE_3.webp"),
+    img("Rohan_Preksha/COUPLE_8.webp"),
+    img("Rohan_Preksha/COUPLE_13.webp"),
+    img("Rohan_Preksha/COUPLE_18.webp"),
+    img("Rohan_Preksha/COUPLE_24.webp"),
+    img("Rohan_Preksha/COUPLE_38.webp"),
+    img("Rohan_Preksha/COUPLE_45.webp"),
+    img("Rohan_Preksha/COUPLE_48.webp"),
+    img("Rohan_Preksha/COUPLE_50.webp"),
+    img("Rohan_Preksha/COUPLE_54.webp"),
+    img("Rohan_Preksha/COUPLE_57.webp"),
+    img("Rohan_Preksha/COUPLE_58.webp"),
+    img("Rohan_Preksha/COUPLE_61.webp"),
+    img("Rohan_Preksha/COUPLE_63.webp"),
+    img("Rohan_Preksha/COUPLE_66.webp"),
+    img("Rohan_Preksha/COUPLE_68.webp"),
+    img("Rohan_Preksha/COUPLE_72.webp"),
+    img("Rohan_Preksha/COUPLE_74.webp"),
+    img("Rohan_Preksha/COUPLE_93.webp"),
+    img("Rohan_Preksha/COUPLE_110.webp"),
+    img("Rohan_Preksha/COUPLE_113.webp"),
+    img("Rohan_Preksha/COUPLE_136.webp"),
+    img("Rohan_Preksha/COUPLE_139.webp"),
+    img("Rohan_Preksha/COUPLE_141.webp"),
+    img("Rohan_Preksha/COUPLE_147.webp"),
+    img("Rohan_Preksha/COUPLE_154.webp"),
+    img("Rohan_Preksha/COUPLE_159.webp"),
+    img("Rohan_Preksha/COUPLE_162.webp"),
+    img("Rohan_Preksha/COUPLE_171.webp"),
+    img("Rohan_Preksha/COUPLE_219.webp"),
+    img("Rohan_Preksha/COUPLE_234.webp"),
+    img("Rohan_Preksha/COUPLE_236.webp"),
+    img("Rohan_Preksha/COUPLE_246.webp"),
+
+    img("Rohan_Preksha/HALDI_1278.webp"),
+    img("Rohan_Preksha/HALDI_1289.webp"),
+    img("Rohan_Preksha/HALDI_1294.webp"),
+    img("Rohan_Preksha/HALDI_1314.webp"),
+    img("Rohan_Preksha/HALDI_1366.webp"),
+    img("Rohan_Preksha/HALDI_1416.webp"),
+    img("Rohan_Preksha/HALDI_1486.webp"),
+    img("Rohan_Preksha/HALDI_1496.webp"),
+    img("Rohan_Preksha/HALDI_1619.webp"),
+    img("Rohan_Preksha/HALDI_1698.webp"),
+    img("Rohan_Preksha/HALDI_1718.webp"),
+    img("Rohan_Preksha/HALDI_1824.webp"),
+    img("Rohan_Preksha/HALDI_1833.webp"),
+    img("Rohan_Preksha/HALDI_1845.webp"),
+    img("Rohan_Preksha/HALDI_1855.webp"),
+    img("Rohan_Preksha/HALDI_1863.webp"),
+    img("Rohan_Preksha/HALDI_1866.webp"),
+
+    img("Rohan_Preksha/RICEPTION_2686.webp"),
+    img("Rohan_Preksha/RICEPTION_2776.webp"),
+    img("Rohan_Preksha/RICEPTION_2826.webp"),
+    img("Rohan_Preksha/RICEPTION_2829.webp"),
+    img("Rohan_Preksha/RICEPTION_2964.webp"),
+    img("Rohan_Preksha/RICEPTION_3037.webp"),
+
+    img("Rohan_Preksha/SANGEET_630.webp"),
+    img("Rohan_Preksha/SANGEET_648.webp"),
+    img("Rohan_Preksha/SANGEET_705.webp"),
+    img("Rohan_Preksha/SANGEET_711.webp"),
+    img("Rohan_Preksha/SANGEET_726.webp"),
+    img("Rohan_Preksha/SANGEET_737.webp"),
+    img("Rohan_Preksha/SANGEET_742.webp"),
+    img("Rohan_Preksha/SANGEET_774.webp"),
+    img("Rohan_Preksha/SANGEET_793.webp"),
+    img("Rohan_Preksha/SANGEET_794.webp"),
+    img("Rohan_Preksha/SANGEET_797.webp"),
+    img("Rohan_Preksha/SANGEET_799.webp"),
+    img("Rohan_Preksha/SANGEET_800.webp"),
+    img("Rohan_Preksha/SANGEET_806.webp"),
+    img("Rohan_Preksha/SANGEET_860.webp"),
+    img("Rohan_Preksha/SANGEET_977.webp"),
+    img("Rohan_Preksha/SANGEET_1056.webp"),
+    img("Rohan_Preksha/SANGEET_1063.webp"),
+
+    img("Rohan_Preksha/WEDDING_1946.webp"),
+    img("Rohan_Preksha/WEDDING_1947.webp"),
+    img("Rohan_Preksha/WEDDING_1971.webp"),
+    img("Rohan_Preksha/WEDDING_1975.webp"),
+    img("Rohan_Preksha/WEDDING_1976.webp"),
+    img("Rohan_Preksha/WEDDING_1979.webp"),
+    img("Rohan_Preksha/WEDDING_1981.webp"),
+    img("Rohan_Preksha/WEDDING_1996.webp"),
+    img("Rohan_Preksha/WEDDING_2006.webp"),
+    img("Rohan_Preksha/WEDDING_2084.webp"),
+    img("Rohan_Preksha/WEDDING_2106.webp"),
+    img("Rohan_Preksha/WEDDING_2114.webp"),
+    img("Rohan_Preksha/WEDDING_2116.webp"),
+    img("Rohan_Preksha/WEDDING_2118.webp"),
+    img("Rohan_Preksha/WEDDING_2119.webp"),
+    img("Rohan_Preksha/WEDDING_2201.webp"),
+    img("Rohan_Preksha/WEDDING_2346.webp"),
+    img("Rohan_Preksha/WEDDING_2348.webp"),
+    img("Rohan_Preksha/WEDDING_2544.webp"),
+    img("Rohan_Preksha/WEDDING_2566.webp"),
+    img("Rohan_Preksha/WEDDING_2571.webp")
+  ],
 },
   "Chaitrali_Shubham": {
     couple: "Chaitrali & Shubham",
@@ -888,22 +973,33 @@ export default function WeddingPage() {
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
         )}
-        <div className="absolute inset-0 bg-black/30" />
+        {/* <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 h-full flex items-center justify-center px-4 sm:px-6">
           <div className="text-center max-w-full">
             <p className="font-sans text-[9px] sm:text-[11px] tracking-[0.35em] sm:tracking-[0.5em] uppercase text-white/90 mb-3 sm:mb-4">
               Wedding Story
             </p>
-            <h1 className="font-serif text-white text-[13vw] leading-[1.05] sm:text-6xl sm:leading-none md:text-8xl lg:text-9xl tracking-tight font-light break-words">
+            <h1 className="font-serif text-black text-[13vw] leading-[1.05] sm:text-6xl sm:leading-none md:text-8xl lg:text-9xl tracking-tight font-light break-words">
               {wedding.couple}
             </h1>
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* 2. STORY DETAILS SECTION */}
-      <section className="max-w-4xl mx-auto px-5 sm:px-6 py-16 sm:py-24 md:py-32 text-center bg-white">
-        <span className="inline-block font-sans text-[9px] sm:text-[8px] tracking-[0.3em] sm:tracking-[0.4em] uppercase text-[#bba98a] mb-6 sm:mb-8 font-medium">
+    <section className="max-w-4xl mx-auto px-5 sm:px-6 pt-6 pb-16 sm:pt-8 sm:pb-20 md:pt-10 md:pb-24 text-center bg-white">
+  <div className="absolute inset-0 bg-black/30" />
+<div className="relative z-10 h-full flex items-center justify-center px-4 sm:px-6">
+    <div className="text-center max-w-full">
+            <p className="font-sans text-[9px] sm:text-[11px] tracking-[0.35em] sm:tracking-[0.5em] uppercase text-black/90 sm:mb-4">
+        Wedding Story
+      </p>
+<h1 className="font-serif text-black text-[13vw] leading-[1.05] sm:text-4xl sm:leading-none md:text-8xl lg:text-7xl tracking-tight font-light">
+        {wedding.couple}
+      </h1>
+    </div>
+  </div>
+        <span className="inline-block font-sans text-[9px] sm:text-[8px] tracking-[0.3em] sm:tracking-[0.4em] uppercase text-black/70 mt-4 sm:mt-4 font-medium">
           {wedding.location}
         </span>
         <div className="space-y-6 sm:space-y-8">

@@ -31,7 +31,7 @@ const socialLinks = [
 
 // Google Maps embed URL — swap the query for your exact studio address / place ID
 const mapEmbedUrl =
-  "https://www.google.com/maps?q=Bunglow%20no%206%2C%20Periwinkle%20Society%2C%20Near%20Yogi%20park%20Baner%2C%20Pune%20411045&output=embed";
+  "https://www.google.com/maps?q=18.5518842,73.7724323&output=embed";
 
 const faqData = [
   {
@@ -259,7 +259,7 @@ const Contact = () => {
               <h3 className="font-['Cormorant_Garamond'] text-2xl mb-6 italic">Visit our Studio</h3>
               <p className="text-gray-500 font-light leading-relaxed mb-8 text-[0.95rem]">
                 Bunglow no 6, Periwinkle Society,<br />
-                Near Yogi park Baner, Pune 411045
+                Near Yogi park Baner, Pune  411069
               </p>
             </div>
 

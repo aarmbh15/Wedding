@@ -102,9 +102,11 @@ const About = () => {
 
       {/* ─── PHILOSOPHY ───────────────────────────────────────────── */}
       <section ref={valRef} className="mt-16 bg-white pt-[clamp(16px,2vw,32px)] pb-[clamp(48px,6vw,80px)] px-6">
-        <div className="max-w-[1200px] mx-auto text-center">
-          <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4vw,3.9rem)] font-light">Why Choose Us?</h2>
-        </div>
+        <div className="max-w-[1200px] mx-auto text-center mb-6 sm:mb-0">
+  <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4vw,3.9rem)] mb-6 font-light">
+    Why Choose Us?
+  </h2>
+</div>
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200 border border-gray-200">
           {philosophyItems.map((v, i) => (
             <div key={i} className="bg-[#F4F1EA] p-8 sm:p-10 md:p-16 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group">

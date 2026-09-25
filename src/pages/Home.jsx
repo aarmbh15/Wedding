@@ -137,21 +137,18 @@ const heroImagesMobile = [
 const portfolioGrid = [
   { src: img("Web Gallery/img5001.webp") }, { src: img("Web Gallery/img5002.webp") },
   { src: img("Web Gallery/img5003.webp") }, { src: img("Web Gallery/img5004.webp") },
-  { src: img("Web Gallery/img5005.webp") }, { src: img("Web Gallery/img5007.webp") },
-  // { src: img("Web Gallery/img5008.webp") },
-  { src: img("Web Gallery/img5009.webp") },
+  { src: img("Web Gallery/img5005.webp") }, { src: img("Web Gallery/img5009.webp") },
   { src: img("Web Gallery/img5010.webp") }, { src: img("Web Gallery/img5006.webp") },
+  { src: img("Web Gallery/RSB_9563..webp") },
   { src: img("Web Gallery/img5011.webp") }, { src: img("Web Gallery/img5012.webp") },
   { src: img("Web Gallery/img5013.webp") }, { src: img("Web Gallery/img5014.webp") },
-  // { src: img("Web Gallery/img5015.webp") },
-  { src: img("Web Gallery/port.webp") }, 
-  { src: img("Web Gallery/img5016.webp") },
+  { src: img("Web Gallery/port.webp") }, { src: img("Web Gallery/img5016.webp") },
   { src: img("Web Gallery/img5017.webp") }, { src: img("Web Gallery/img5018.webp") },
-  { src: img("Web Gallery/img5019.webp") }, 
+  { src: img("Web Gallery/img5019.webp") }, { src: img("Web Gallery/img5007.webp") },
 ];
 
 const featured = [
-  { slug: "Anuja_Shubhang", couple: "Shubhang & Anuja", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Anuja_Shubhang.webp") },
+  { slug: "Anuja_Shubhang", couple: "Shubhang & Anuja", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("Anuja_Shubhang/img709.webp") },
   { slug: "Atharva_Haritha", couple: "Atharva & Harita", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Atharva_Harita.webp") },
   { slug: "Atish_Shweta", couple: "Atish & Shweta", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Atish_Shweta.webp") },
 ];
