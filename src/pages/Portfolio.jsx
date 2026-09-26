@@ -12,7 +12,7 @@ const weddings = [
   { slug: "Raj_Suhasini", couple: "Raj & Suhasini", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Raj_Suhasini.webp") },
   { slug: "Rohan-preksha", couple: "Rohan & Preksha", location: "Pushkar, Rajasthan", date: "January 2025", category: "Royal", cover: img("portfolio/Rohan_Preksha.webp") },
   { slug: "Atharva_Haritha", couple: "Atharva & Harita", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Atharva_Harita.webp") },
-  { slug: "Anuja_Shubhang", couple: "Shubhang & Anuja", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Anuja_Shubhang.webp") },
+  { slug: "Anuja_Shubhang", couple: "Shubhang & Anuja", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("Anuja_Shubhang/img709.webp") },
   { slug: "Atish_Shweta", couple: "Atish & Shweta", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Atish_Shweta.webp") },
   { slug: "bhakti-sourabh", couple: "Saurabh & Bhakti", location: "Pratap Niwas Palace, Jodhpur, Rajasthan", date: "October 2024", category: "City", cover: img("portfolio/Bhakti_Saurabh.webp") },
   { slug: "Gaurav_Chinmaee", couple: "Gaurav & Chinmaee", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Gaurav_Chinmaee.webp") },

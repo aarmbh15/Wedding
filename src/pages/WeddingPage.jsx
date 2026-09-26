@@ -960,8 +960,11 @@ export default function WeddingPage() {
         ← Back
       </button>
 
-      {/* 1. HERO SECTION */}
-      <section className="relative w-full h-[100svh] min-h-[420px] max-h-[900px] overflow-hidden">
+      {/* 1. HERO SECTION
+          - Mobile: landscape-style crop (wider than tall) via aspect-[4/3]
+          - Desktop (sm+): full-viewport-height hero, same as before
+      */}
+      <section className="relative w-full aspect-[4/3] sm:aspect-auto sm:h-[100svh] sm:min-h-[420px] sm:max-h-[900px] overflow-hidden">
         {/* Real <img> instead of a CSS background so the hero scales
             correctly (object-cover) on every device / orientation,
             including iOS Safari where 100vh + background-image can
@@ -973,32 +976,43 @@ export default function WeddingPage() {
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
         )}
-        {/* <div className="absolute inset-0 bg-black/30" />
-        <div className="relative z-10 h-full flex items-center justify-center px-4 sm:px-6">
+        <div className="absolute inset-0 bg-black/30" />
+
+        {/* Couple name overlaid on the hero image — DESKTOP ONLY.
+            On mobile the name is shown below the image instead (see the
+            Story Details section), so this block is hidden below the
+            `sm` breakpoint. */}
+        <div className="hidden sm:flex relative z-10 h-full items-center justify-center px-4 sm:px-6">
           <div className="text-center max-w-full">
             <p className="font-sans text-[9px] sm:text-[11px] tracking-[0.35em] sm:tracking-[0.5em] uppercase text-white/90 mb-3 sm:mb-4">
               Wedding Story
             </p>
-            <h1 className="font-serif text-black text-[13vw] leading-[1.05] sm:text-6xl sm:leading-none md:text-8xl lg:text-9xl tracking-tight font-light break-words">
+            <h1 className="font-serif text-white text-6xl leading-none md:text-8xl lg:text-9xl tracking-tight font-light break-words">
               {wedding.couple}
             </h1>
           </div>
-        </div> */}
+        </div>
       </section>
 
       {/* 2. STORY DETAILS SECTION */}
-    <section className="max-w-4xl mx-auto px-5 sm:px-6 pt-6 pb-16 sm:pt-8 sm:pb-20 md:pt-10 md:pb-24 text-center bg-white">
-  <div className="absolute inset-0 bg-black/30" />
-<div className="relative z-10 h-full flex items-center justify-center px-4 sm:px-6">
-    <div className="text-center max-w-full">
-            <p className="font-sans text-[9px] sm:text-[11px] tracking-[0.35em] sm:tracking-[0.5em] uppercase text-black/90 sm:mb-4">
-        Wedding Story
-      </p>
-<h1 className="font-serif text-black text-[13vw] leading-[1.05] sm:text-4xl sm:leading-none md:text-8xl lg:text-7xl tracking-tight font-light">
-        {wedding.couple}
-      </h1>
-    </div>
-  </div>
+      <section className="relative max-w-4xl mx-auto px-5 sm:px-6 pt-6 pb-16 sm:pt-8 sm:pb-20 md:pt-10 md:pb-24 text-center bg-white">
+        {/* Couple name below the image — MOBILE ONLY, kept on a single
+            line regardless of name length (clamp() scales the font down
+            for longer names instead of wrapping). On desktop the name
+            already appears overlaid on the hero image above, so this
+            block is hidden at the `sm` breakpoint and up. */}
+        <div className="sm:hidden mb-4">
+          <p className="font-sans text-[9px] tracking-[0.35em] uppercase text-black/90 mb-2">
+            Wedding Story
+          </p>
+          <h1
+            className="font-serif text-black tracking-tight font-light whitespace-nowrap overflow-hidden text-ellipsis px-2"
+            style={{ fontSize: "clamp(1.1rem, 7vw, 2.25rem)" }}
+          >
+            {wedding.couple}
+          </h1>
+        </div>
+
         <span className="inline-block font-sans text-[9px] sm:text-[8px] tracking-[0.3em] sm:tracking-[0.4em] uppercase text-black/70 mt-4 sm:mt-4 font-medium">
           {wedding.location}
         </span>
