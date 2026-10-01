@@ -153,7 +153,7 @@ const portfolioGrid = [
 
 const featured = [
   { slug: "Atharva_Haritha", couple: "Atharva & Harita", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Atharva_Harita.webp") },
-  { slug: "Anuja_Shubhang", couple: "Shubhang & Anuja", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("Anuja_Shubhang/img709.webp") },
+  { slug: "Anuja_Shubhang", couple: "Shubhang & Anuja", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Anuja_Shubhang.webp") },
   { slug: "Atish_Shweta", couple: "Atish & Shweta", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Atish_Shweta.webp") },
 ];
 
