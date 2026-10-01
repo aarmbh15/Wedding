@@ -80,22 +80,19 @@ function useInView(threshold = 0.1) {
   return [ref, inView];
 }
 
-function ProgressiveImg({ src, alt = "", shouldLoad = true, isMasonry = false, className = "", imgClassName = "", onImageLoad }) {
+function ProgressiveImg({ src, alt = "", shouldLoad = true, isMasonry = false }) {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className={`relative overflow-hidden bg-[#f7f7f7] ${isMasonry ? "w-full h-auto group rounded-sm" : "w-full h-full"} ${className}`}>
+    <div className={`relative overflow-hidden bg-[#f7f7f7] ${isMasonry ? "w-full h-auto group rounded-sm" : "w-full h-full"}`}>
       {shouldLoad && src && (
         <img
           src={src}
           alt={alt}
           loading="lazy"
           decoding="async"
-          onLoad={() => {
-            setLoaded(true);
-            if (onImageLoad) onImageLoad();
-          }}
-          className={`block w-full ${isMasonry ? "h-auto object-cover transition-all duration-700 ease-out group-hover:scale-[1.03]" : "absolute inset-0 h-full object-cover transition-all duration-700 ease-out group-hover:scale-[1.03]"} ${imgClassName} ${loaded ? "opacity-100 scale-100" : "opacity-0 scale-105"}`}
+          onLoad={() => setLoaded(true)}
+          className={`block w-full ${isMasonry ? "h-auto object-cover transition-all duration-700 ease-out group-hover:scale-[1.03]" : "absolute inset-0 h-full object-cover transition-all duration-1000 ease-out"} ${loaded ? "opacity-100 scale-100" : "opacity-0 scale-105"}`}
         />
       )}
     </div>
@@ -152,8 +149,8 @@ const portfolioGrid = [
 ];
 
 const featured = [
-  { slug: "Atharva_Haritha", couple: "Atharva & Harita", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Atharva_Harita.webp") },
   { slug: "Anuja_Shubhang", couple: "Shubhang & Anuja", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("Anuja_Shubhang/img709.webp") },
+  { slug: "Atharva_Haritha", couple: "Atharva & Harita", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Atharva_Harita.webp") },
   { slug: "Atish_Shweta", couple: "Atish & Shweta", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Atish_Shweta.webp") },
 ];
 
@@ -465,60 +462,6 @@ export default function Home() {
   const [popupLoading, setPopupLoading] = useState(false);
   const [popupSubmitted, setPopupSubmitted] = useState(false);
 
-  const [lastImageHeight, setLastImageHeight] = useState(null);
-  const galleryRef = useRef(null);
-  const lastItemRef = useRef(null);
-
-  const updateLastImageHeight = useCallback(() => {
-    if (typeof window === "undefined" || window.innerWidth < 1024 || !galleryRef.current || !lastItemRef.current) {
-      setLastImageHeight(null);
-      return;
-    }
-    const children = Array.from(galleryRef.current.children);
-    if (children.length < 2) return;
-
-    const lastItem = lastItemRef.current;
-    const lastRect = lastItem.getBoundingClientRect();
-
-    const otherColumnsBottoms = children
-      .slice(0, -1)
-      .filter((el) => {
-        const r = el.getBoundingClientRect();
-        return r.right <= lastRect.left + 8;
-      })
-      .map((el) => el.getBoundingClientRect().bottom);
-
-    const targetBottom =
-      otherColumnsBottoms.length > 0
-        ? Math.max(...otherColumnsBottoms)
-        : children[children.length - 2]?.getBoundingClientRect().bottom;
-
-    if (targetBottom) {
-      const calculatedHeight = Math.round(targetBottom - lastRect.top);
-      if (calculatedHeight > 100) {
-        setLastImageHeight(calculatedHeight);
-      }
-    }
-  }, []);
-
-  useEffect(() => {
-    updateLastImageHeight();
-    window.addEventListener("resize", updateLastImageHeight);
-
-    let ro;
-    if (galleryRef.current && typeof window !== "undefined" && window.ResizeObserver) {
-      ro = new ResizeObserver(() => {
-        updateLastImageHeight();
-      });
-      ro.observe(galleryRef.current);
-    }
-
-    return () => {
-      window.removeEventListener("resize", updateLastImageHeight);
-      if (ro) ro.disconnect();
-    };
-  }, [updateLastImageHeight, gridInView]);
-
   useEffect(() => {
     if (popupSubmitted) return;
     const openPopup = () => setShowEnquiry(true);
@@ -649,39 +592,29 @@ export default function Home() {
               <div className="w-10 h-[1px] bg-[#c9a84c] mx-auto mt-2" />
             </div>
 
-            <div
-              ref={galleryRef}
-              className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-3 md:gap-4 px-3 md:px-5"
-            >
-              {portfolioGrid
-                .filter((image) => image && image.src)
-                .map((image, i, arr) => {
-                  const isLast = i === arr.length - 1;
-                  return (
-                    <div
-                      key={i}
-                      ref={isLast ? lastItemRef : null}
-                      className={`fade-up ${
-                        gridInView ? "in" : ""
-                      } mb-3 md:mb-4 break-inside-avoid inline-block w-full relative ${
-                        isLast ? "overflow-hidden rounded-sm lg:aspect-[3/4.15]" : ""
-                      }`}
-                      style={{
-                        transitionDelay: `${(i % 5) * 0.1}s`,
-                        ...(isLast && lastImageHeight ? { height: `${lastImageHeight}px` } : {}),
-                      }}
-                    >
-                      <ProgressiveImg
-                        src={image.src}
-                        alt={`Gallery ${i}`}
-                        shouldLoad={gridInView}
-                        isMasonry={!isLast || !lastImageHeight}
-                        imgClassName={isLast ? "object-top" : ""}
-                        onImageLoad={updateLastImageHeight}
-                      />
-                    </div>
-                  );
-                })}
+            <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-3 md:gap-4 px-3 md:px-5">
+            {portfolioGrid
+  .filter((image) => image && image.src)
+  .map((image, i, arr) => (
+    <div
+      key={i}
+      className={`fade-up ${
+        gridInView ? "in" : ""
+      } mb-3 md:mb-4 break-inside-avoid inline-block w-full relative ${
+        i === arr.length - 1 ? "h-[515px] overflow-hidden" : ""
+      }`}
+      style={{
+        transitionDelay: `${(i % 5) * 0.1}s`,
+      }}
+    >
+      <ProgressiveImg
+        src={image.src}
+        alt={`Gallery ${i}`}
+        shouldLoad={gridInView}
+        isMasonry={true}
+      />
+    </div>
+  ))}
             </div>
 
             <div className="text-center mt-[clamp(24px,3vw,40px)]">
