@@ -443,7 +443,7 @@ img("Aishwarya_Sanmay/Saptadhi1254.webp"),
 img("Aishwarya_Sanmay/Saptadhi1266.webp"),
 img("Aishwarya_Sanmay/Saptadhi1274.webp"),
 img("Aishwarya_Sanmay/Saptadhi1289.webp"),
-img("Aishwarya_Sanmay/Wedding1023.webp"),
+// img("Aishwarya_Sanmay/Wedding1023.webp"),
 ]
   },
    "Atish_Shweta": {
