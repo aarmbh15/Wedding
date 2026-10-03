@@ -616,7 +616,6 @@ img("Aishwarya_Sanmay/Saptadhi1289.webp"),
       "By the wedding day, the pace had slowed, allowing them to take in each ritual, each glance and each moment shared with the people around them."
     ],
 images: [
-  img("portfolio/Shruti_Harjot.webp"),
   img("Shruti_Harjot/img3051.webp"),
   img("Shruti_Harjot/img3001.webp"),
   img("Shruti_Harjot/img3002.webp"),
@@ -674,6 +673,7 @@ images: [
   img("Shruti_Harjot/img3054.webp"),
   img("Shruti_Harjot/img3055.webp"),
   img("Shruti_Harjot/img3056.webp"),
+   img("portfolio/Shruti_Harjot.webp"),
   img("Shruti_Harjot/img3058.webp"),
   img("Shruti_Harjot/img3059.webp"),
   img("Shruti_Harjot/img3060.webp"),
@@ -804,7 +804,7 @@ images: [
       "The sangeet brought a different energy, with performances, dancing and a packed dance floor. By the wedding day, the focus shifted to meaningful rituals, bringing everyone together for a celebration rooted in tradition."
     ],
 images: [
-  img("portfolio/Anuja_Shubhang.webp"),
+  img("Anuja_Shubhang/img709.webp"),
   img("Anuja_Shubhang/img701.webp"),
   img("Anuja_Shubhang/img702.webp"),
   img("Anuja_Shubhang/img703.webp"),
@@ -813,7 +813,7 @@ images: [
   img("Anuja_Shubhang/img706.webp"),
   img("Anuja_Shubhang/img707.webp"),
   img("Anuja_Shubhang/img708.webp"),
-  img("Anuja_Shubhang/img709.webp"),
+  img("portfolio/Anuja_Shubhang.webp"),
   img("Anuja_Shubhang/img710.webp"),
   img("Anuja_Shubhang/img711.webp"),
   img("Anuja_Shubhang/img712.webp"),
@@ -1028,49 +1028,46 @@ export default function WeddingPage() {
         </div>
       </section>
 
-      {/* 3. DYNAMIC MASONRY GALLERY */}
+      {/* 3. DYNAMIC JUSTIFIED GALLERY (OPTION 2) */}
       <section className="max-w-full mx-auto px-1 pb-20 sm:pb-32 bg-[#F4F1EA]">
-        <div className="columns-2 sm:columns-2 md:columns-3 lg:columns-3 xl:columns-4 gap-1.5 sm:gap-2 space-y-1.5 sm:space-y-2">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2">
           {wedding.images.map((src, index) => (
             <div
               key={index}
-              className="break-inside-avoid w-full group cursor-pointer"
+              className="h-[200px] sm:h-[260px] md:h-[320px] flex-auto relative overflow-hidden group cursor-pointer bg-neutral-100"
               onClick={() => openLightbox(index)}
             >
-              <div className="relative overflow-hidden transition-all duration-700 ease-in-out bg-neutral-100">
-                <img
-                  src={src}
-                  alt={`${wedding.couple} moment ${index + 1}`}
-                  className="w-full h-auto block object-cover transition-transform duration-[1.2s] group-hover:scale-105"
-                  loading="lazy"
-                  onError={(e) => {
-                    // Runtime safety net: if a resolved URL 404s on the
-                    // live server, hide its card instead of showing a
-                    // broken-image icon.
-                    const card = e.currentTarget.closest(".break-inside-avoid");
-                    if (card) card.style.display = "none";
-                  }}
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500 flex items-center justify-center">
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-white stroke-1"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                      />
-                    </svg>
-                  </div>
+              <img
+                src={src}
+                alt={`${wedding.couple} moment ${index + 1}`}
+                className="h-full w-auto min-w-full object-cover transition-transform duration-[1.2s] group-hover:scale-105"
+                loading="lazy"
+                onError={(e) => {
+                  const card = e.currentTarget.closest(".group");
+                  if (card) card.style.display = "none";
+                }}
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500 flex items-center justify-center pointer-events-none">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-white stroke-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
           ))}
+          {/* Spacer to prevent trailing row items from over-stretching */}
+          <div className="flex-grow-[1000] h-0 min-w-0" />
         </div>
       </section>
 

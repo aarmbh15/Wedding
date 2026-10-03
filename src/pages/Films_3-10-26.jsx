@@ -147,19 +147,19 @@ const VideoModal = React.memo(function VideoModal({ film, onClose }) {
 
 /* ---------------- Films Data ---------------- */
 const films = [
-  { couple: "Rahul & Esha", url: "https://youtu.be/6-2JG29kYxU", id: "6-2JG29kYxU", location: "Fort JadhavGADH, Pune, Maharashtra", category: "City", thumbnail: ThumbRahulEsha },
-  { couple: "Harjot & Shruti", url: "https://youtu.be/DaO8vn9w7zo", id: "DaO8vn9w7zo", location: "The Orchid Hotel, Pune", category: "Royal", thumbnail: ThumbHarjotShruti },
-  { couple: "Bhakti & Saurabh", url: "https://youtu.be/tHZ2RwYCdpQ", id: "tHZ2RwYCdpQ", location: "Pratap Niwas Palace, Jodhpur, Rajasthan", category: "Royal", thumbnail: ThumbBhaktiSaurabh },
   { couple: "Shubhang & Anuja", url: "https://youtu.be/6AlgoGp8SLg", id: "6AlgoGp8SLg", location: "Marigold Banquets 'N' Conventions, Pune", category: "Destination", thumbnail: ThumbShubhangAnuja },
-  { couple: "Utsav & Dyuthi", url: "https://youtu.be/nHDxp0WJqaE", id: "nHDxp0WJqaE", location: "Bangalore", category: "Destination", thumbnail: ThumbUtsavDyuthi },
-  { couple: "Amey & Amruta", url: "https://youtu.be/yUpQjeTuSbA", id: "yUpQjeTuSbA", location: "Marigold Banquets 'N' Conventions, Pune", category: "Destination", thumbnail: ThumbAmeyAmruta },
   { couple: "Abhimanyu & Manisha", url: "https://youtu.be/ppQtE_3sPcg", id: "ppQtE_3sPcg", location: "Marigold Banquets 'N' Conventions, Pune", category: "Coastal", thumbnail: ThumbAbhimanyuManisha },
+  { couple: "Amey & Amruta", url: "https://youtu.be/yUpQjeTuSbA", id: "yUpQjeTuSbA", location: "Marigold Banquets 'N' Conventions, Pune", category: "Destination", thumbnail: ThumbAmeyAmruta },
+  { couple: "Harjot & Shruti", url: "https://youtu.be/DaO8vn9w7zo", id: "DaO8vn9w7zo", location: "The Orchid Hotel, Pune", category: "Royal", thumbnail: ThumbHarjotShruti },
   { couple: "Pradyumna & Drushti", url: "https://youtu.be/ER4o6k5L3J0", id: "ER4o6k5L3J0", location: "Radisson Blu Hotel, Pune", category: "City", thumbnail: ThumbPradyumnaDrushti },
   { couple: "Dhriti & Lakshya", url: "https://youtu.be/QV-GVZNHNDo", id: "QV-GVZNHNDo", location: "Marigold Banquets 'N' Conventions, Pune", category: "Royal", thumbnail: ThumbDhritiLakshya },
+  { couple: "Rahul & Esha", url: "https://youtu.be/6-2JG29kYxU", id: "6-2JG29kYxU", location: "Fort JadhavGADH, Pune, Maharashtra", category: "City", thumbnail: ThumbRahulEsha },
   { couple: "Chandra & Anmol", url: "https://youtu.be/8UMiPZMhUE4", id: "8UMiPZMhUE4", location: "Marigold Banquets 'N' Conventions, Pune", category: "Destination", thumbnail: ThumbChandraAnmol },
-  { couple: "Nidhi & Kunal", url: "https://youtu.be/ex_Fs-BiUC0", id: "ex_Fs-BiUC0", location: "Bangalore", category: "Coastal", thumbnail: ThumbNidhiKunal },
   { couple: "Indrajeet & Sakshi", url: "https://youtu.be/R0F2tWN8oLc", id: "R0F2tWN8oLc", location: "Marigold Banquets 'N' Conventions, Pune", category: "City", thumbnail: Thumbsakshi },
+  { couple: "Nidhi & Kunal", url: "https://youtu.be/ex_Fs-BiUC0", id: "ex_Fs-BiUC0", location: "Bangalore", category: "Coastal", thumbnail: ThumbNidhiKunal },
   { couple: "Omkar & Apurva", url: "https://youtu.be/DCCGOXaPCHQ", id: "DCCGOXaPCHQ", location: "Marigold Banquets 'N' Conventions, Pune", category: "City", thumbnail: ThumbOmkarApurva },
+  { couple: "Bhakti & Saurabh", url: "https://youtu.be/tHZ2RwYCdpQ", id: "tHZ2RwYCdpQ", location: "Pratap Niwas Palace, Jodhpur, Rajasthan", category: "Royal", thumbnail: ThumbBhaktiSaurabh },
+  { couple: "Utsav & Dyuthi", url: "https://youtu.be/nHDxp0WJqaE", id: "nHDxp0WJqaE", location: "Bangalore", category: "Destination", thumbnail: ThumbUtsavDyuthi },
 ];
 
 /* ---------------- Film Card ---------------- */

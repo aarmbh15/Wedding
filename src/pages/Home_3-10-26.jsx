@@ -7,11 +7,11 @@ import Swal from "sweetalert2";
 
 
 // import heroImg1 from "../assets/Lap/1.webp";
-// import heroImg2 from "../assets/Lap/2.webp";
-// import heroImg3 from "../assets/Lap/3.webp";
+import heroImg2 from "../assets/Lap/2.webp";
+import heroImg3 from "../assets/Lap/3.webp";
 import heroImg5 from "../assets/Lap/5.webp";
 import heroImg6 from "../assets/Lap/6.webp";
-// import heroImg7 from "../assets/Lap/7.webp";
+import heroImg7 from "../assets/Lap/7.webp";
 import heroImg8 from "../assets/Lap/8.webp";
 import heroImg10 from "../assets/Lap/10.webp";
 import heroImg11 from "../assets/Lap/11.webp";
@@ -126,16 +126,9 @@ function LazySection({ children, rootMargin = "200px" }) {
 }
 
 const heroImages = [
-  // { src: heroImg2 },
-  // { src: heroImg3 },
-  { src: heroImg5 },
-  { src: heroImg6 },
-  // { src: heroImg7 },
-  { src: heroImg8 },
-  { src: heroImg10 },
-  { src: heroImg11 },
-  { src: heroImg12 },
-  { src: heroImg14 },
+   { src: heroImg2 }, { src: heroImg3 }, { src: heroImg5 },
+  { src: heroImg6 }, { src: heroImg7 }, { src: heroImg8 }, { src: heroImg10 },
+  { src: heroImg11 }, { src: heroImg12 }, { src: heroImg14 },
 ];
 
 const heroImagesMobile = [
@@ -175,121 +168,59 @@ const testimonials = [
 const aboutImg = img("Chaitrali_Shubham/img407.webp");
 
 function HeroSliderTrack({ images }) {
+  const [current, setCurrent] = useState(0);
   const scrollRef = useRef(null);
   const isProgrammaticScroll = useRef(false);
-  const scrollEndTimeout = useRef(null);
-  const isInteracting = useRef(false);
-  const currentIndexRef = useRef(1);
+  const scrollTimeout = useRef(null);
 
-  // Extend with clones at edges: [cloneLast, ...images, cloneFirst]
-  const slides = useMemo(() => {
-    if (!images || images.length === 0) return [];
-    if (images.length === 1) return images;
-    return [images[images.length - 1], ...images, images[0]];
-  }, [images]);
-
-  const totalRealSlides = images.length;
-
-  // Initialize scroll position to real slide 1
-  useEffect(() => {
+  const scrollToIndex = useCallback((i) => {
     const container = scrollRef.current;
     if (!container) return;
     const slideWidth = container.clientWidth;
-    if (slideWidth) {
-      container.scrollLeft = slideWidth * 1;
-      currentIndexRef.current = 1;
-    }
-  }, [slides]);
-
-  // Maintain position on resize
-  useEffect(() => {
-    const handleResize = () => {
-      const container = scrollRef.current;
-      if (!container) return;
-      const slideWidth = container.clientWidth;
-      if (slideWidth) {
-        container.scrollLeft = slideWidth * currentIndexRef.current;
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    isProgrammaticScroll.current = true;
+    container.scrollTo({ left: slideWidth * i, behavior: "smooth" });
+    setCurrent(i);
+    clearTimeout(scrollTimeout.current);
+    scrollTimeout.current = setTimeout(() => {
+      isProgrammaticScroll.current = false;
+    }, 700);
   }, []);
 
-  // Seamless invisible jump if at a clone boundary
-  const checkBoundaryWrap = useCallback(() => {
-    const container = scrollRef.current;
-    if (!container || totalRealSlides <= 1) return;
-    const slideWidth = container.clientWidth;
-    if (!slideWidth) return;
-
-    const rawIndex = Math.round(container.scrollLeft / slideWidth);
-
-    if (rawIndex >= totalRealSlides + 1) {
-      // Landed on clone of first slide -> seamlessly reset to real first slide
-      container.scrollTo({ left: slideWidth * 1, behavior: "auto" });
-      currentIndexRef.current = 1;
-    } else if (rawIndex <= 0) {
-      // Landed on clone of last slide -> seamlessly reset to real last slide
-      container.scrollTo({ left: slideWidth * totalRealSlides, behavior: "auto" });
-      currentIndexRef.current = totalRealSlides;
-    } else {
-      currentIndexRef.current = rawIndex;
-    }
-    isProgrammaticScroll.current = false;
-  }, [totalRealSlides]);
-
   const goNext = useCallback(() => {
-    if (isInteracting.current) return;
-    const container = scrollRef.current;
-    if (!container || totalRealSlides <= 1) return;
-    const slideWidth = container.clientWidth;
-    if (!slideWidth) return;
+    setCurrent((c) => {
+      const next = (c + 1) % images.length;
+      scrollToIndex(next);
+      return next;
+    });
+  }, [scrollToIndex, images.length]);
 
-    const nextIndex = currentIndexRef.current + 1;
-    isProgrammaticScroll.current = true;
-    container.scrollTo({ left: slideWidth * nextIndex, behavior: "smooth" });
-    currentIndexRef.current = nextIndex;
-
-    clearTimeout(scrollEndTimeout.current);
-    scrollEndTimeout.current = setTimeout(() => {
-      checkBoundaryWrap();
-    }, 650);
-  }, [totalRealSlides, checkBoundaryWrap]);
-
-  // Autoplay every 5 seconds
   useEffect(() => {
-    if (totalRealSlides <= 1) return;
-    const timer = setInterval(goNext, 5000);
-    return () => clearInterval(timer);
-  }, [goNext, totalRealSlides]);
+    const t = setInterval(goNext, 5000);
+    return () => clearInterval(t);
+  }, [goNext]);
 
-  // Handle manual swipe/scroll and wrap seamlessly on rest
   const handleScroll = useCallback(() => {
+    if (isProgrammaticScroll.current) return;
     const container = scrollRef.current;
     if (!container) return;
-
-    clearTimeout(scrollEndTimeout.current);
-    scrollEndTimeout.current = setTimeout(() => {
-      checkBoundaryWrap();
-    }, 150);
-  }, [checkBoundaryWrap]);
+    const slideWidth = container.clientWidth;
+    if (!slideWidth) return;
+    const index = Math.round(container.scrollLeft / slideWidth);
+    setCurrent((c) => (c !== index ? index : c));
+  }, []);
 
   return (
     <div
       ref={scrollRef}
       onScroll={handleScroll}
-      onTouchStart={() => { isInteracting.current = true; }}
-      onTouchEnd={() => { isInteracting.current = false; }}
-      onPointerDown={() => { isInteracting.current = true; }}
-      onPointerUp={() => { isInteracting.current = false; }}
-      className="absolute inset-0 w-full h-full flex overflow-x-auto snap-x snap-mandatory hero-scroll"
+      className="absolute inset-0 w-full h-full flex overflow-x-auto snap-x snap-mandatory scroll-smooth hero-scroll"
     >
-      {slides.map((image, i) => (
+      {images.map((image, i) => (
         <div key={i} className="relative w-full h-full flex-shrink-0 snap-center snap-always">
           <img
             src={image.src}
-            alt={`Tilt Shift Pictures wedding photography`}
-            loading={i <= 2 ? "eager" : "lazy"}
+            alt={`Tilt Shift Pictures wedding photography ${i + 1}`}
+            loading={i === 0 ? "eager" : "lazy"}
             decoding="async"
             draggable={false}
             className="w-full h-full object-cover object-top sm:object-center select-none"
@@ -591,8 +522,8 @@ export default function Home() {
   useEffect(() => {
     if (popupSubmitted) return;
     const openPopup = () => setShowEnquiry(true);
-    const initialTimer = setTimeout(openPopup, 60000);
-    const recurring = setInterval(openPopup, 180000);
+    const initialTimer = setTimeout(openPopup, 2000);
+    const recurring = setInterval(openPopup, 60000);
 
     return () => {
       clearTimeout(initialTimer);
@@ -707,15 +638,15 @@ export default function Home() {
 
       <LazySection rootMargin="400px">
         {(isNear) => (
-          <section ref={gridRef} className="mt-0 bg-[#F4F1EA] pt-[clamp(20px,2.8vw,40px)] pb-[clamp(36px,5vw,64px)]">
+          <section ref={gridRef} className="mt-0 bg-[#F4F1EA] pt-[clamp(40px,5vw,64px)] pb-[clamp(36px,5vw,64px)]">
             <div className="text-center px-6 pb-[clamp(20px,3vw,36px)]">
-              <h2 className="font-cormorant text-[clamp(2.2rem,4vw,3.5rem)] font-light leading-tight text-[#1a1a1a]">
+              <h2 className="font-cormorant text-[clamp(2.2rem,4vw,3.5rem)] font-light text-[#1a1a1a] relative top-8">
                 PORTFOLIO
               </h2>
-              <p className="font-cormorant italic text-[clamp(1rem,1.5vw,1.25rem)] text-[#666] mt-3 max-w-[700px] mx-auto leading-relaxed">
+              <p className="font-cormorant italic text-[clamp(1rem,1.5vw,1.25rem)] text-[#666] mt-10 max-w-[700px] mx-auto leading-relaxed">
                 A collection of beautifully captured wedding moments, emotions and celebrations.
               </p>
-              <div className="w-10 h-[1px] bg-[#c9a84c] mx-auto mt-3" />
+              <div className="w-10 h-[1px] bg-[#c9a84c] mx-auto mt-2" />
             </div>
 
             <div

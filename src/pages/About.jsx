@@ -101,7 +101,7 @@ const About = () => {
       </section>
 
       {/* ─── PHILOSOPHY ───────────────────────────────────────────── */}
-      <section ref={valRef} className="mt-16 bg-white pt-[clamp(16px,2vw,32px)] pb-[clamp(48px,6vw,80px)] px-6">
+      <section ref={valRef} className="mt-4 sm:mt-6 bg-white pt-0 pb-[clamp(48px,6vw,80px)] px-6">
         <div className="max-w-[1200px] mx-auto text-center mb-6 sm:mb-0">
   <h2 className="font-['Cormorant_Garamond'] text-[clamp(2rem,4vw,3.9rem)] mb-6 font-light">
     Why Choose Us?
