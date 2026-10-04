@@ -19,6 +19,10 @@ import heroImg12 from "../assets/Lap/12.webp";
 // import heroImg13 from "../assets/Lap/13.webp";
 import heroImg14 from "../assets/Lap/14.webp";
 
+import heroBhaktiSourabh from "../assets/Bhakti_Sourabh/img333.webp";
+import heroAishwaryaSanmay from "../assets/Aishwarya_Sanmay/Sangeet214.webp";
+import heroAmrutaAmey from "../assets/Amruta_Amey/ADM06767.webp";
+
 import heroMobile1 from "../assets/Mobile/1.webp";
 import heroMobile2 from "../assets/Mobile/2.webp";
 import heroMobile3 from "../assets/Mobile/3.webp";
@@ -126,16 +130,15 @@ function LazySection({ children, rootMargin = "200px" }) {
 }
 
 const heroImages = [
-  // { src: heroImg2 },
-  // { src: heroImg3 },
-  { src: heroImg5 },
-  { src: heroImg6 },
-  // { src: heroImg7 },
-  { src: heroImg8 },
-  { src: heroImg10 },
-  { src: heroImg11 },
-  { src: heroImg12 },
-  { src: heroImg14 },
+  { src: heroImg11 },          // 5 (11.webp)
+  { src: heroImg8 },           // 3 (8.webp)
+  { src: heroImg5 },           // 1 (5.webp)
+  { src: heroAmrutaAmey },      // 10 (ADM06767.webp)
+  { src: heroBhaktiSourabh },   // 8 (img333.webp)
+  { src: heroAishwaryaSanmay }, // 9 (Sangeet214.webp)
+  { src: heroImg6 },           // 2 (6.webp)
+  { src: heroImg12 },          // 6 (12.webp)
+  { src: heroImg14 },          // 7 (14.webp)
 ];
 
 const heroImagesMobile = [
