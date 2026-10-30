@@ -8,6 +8,8 @@ const allImages = import.meta.glob("../assets/**/*.{webp,jpeg,png}", { eager: tr
 const img = (path) => allImages[`../assets/${path}`]?.default;
 
 const weddings = [
+  { slug: "Aishwarya_Sanmay", couple: "Sanmay & Aishwarya", location: "Sorina Hills Resort, Khadakwasla, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Sanmay_Aishwarya.webp") },
+  { slug: "Esha_Rahul", couple: "Esha & Rahul", location: "Fort JadhavGADH, Pune, Maharashtra", date: "Month Year", category: "Tag", cover: img("portfolio/Rahul_Esha.jpeg") },
   { slug: "Shruti_Harjot", couple: "Harjot & Shruti", location: "The Orchid Hotel, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Shruti_Harjot.webp") },
   { slug: "Raj_Suhasini", couple: "Raj & Suhasini", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Raj_Suhasini.webp") },
   { slug: "Rohan-preksha", couple: "Rohan & Preksha", location: "Pushkar, Rajasthan", date: "January 2025", category: "Royal", cover: img("portfolio/Rohan_Preksha.webp") },
@@ -17,7 +19,6 @@ const weddings = [
   { slug: "bhakti-sourabh", couple: "Saurabh & Bhakti", location: "Pratap Niwas Palace, Jodhpur, Rajasthan", date: "October 2024", category: "City", cover: img("portfolio/Bhakti_Saurabh.webp") },
   { slug: "Gaurav_Chinmaee", couple: "Gaurav & Chinmaee", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Gaurav_Chinmaee.webp") },
   { slug: "Nina_Parth", couple: "Parth & Nina", location: "Marigold Banquets 'N' Conventions, Pune", date: "January 2025", category: "Royal", cover: img("portfolio/Nina_Parth.webp") },
-  { slug: "Aishwarya_Sanmay", couple: "Sanmay & Aishwarya", location: "Sorina Hills Resort, Khadakwasla, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Sanmay_Aishwarya.webp") },
   { slug: "amruta-amey", couple: "Amruta & Amey", location: "Marigold Banquets 'N' Conventions, Pune", date: "December 2024", category: "Destination", cover: img("portfolio/Amruta_Amey.webp") },
   { slug: "abhimanyu-manisha", couple: "Abhimanyu & Manisha", location: "Marigold Banquets 'N' Conventions, Pune", date: "November 2024", category: "Coastal", cover: img("portfolio/Abhimanyu_Manisha.webp") },
   { slug: "Chaitrali_Shubham", couple: "Shubham & Chaitraly", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Chaitraly_Shubham.webp") },

@@ -1,3 +1,4 @@
+
 import TSPLogo from "../assets/TSP_logo.png";
 import { useState, useEffect, useCallback, memo } from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -12,6 +13,7 @@ const NAV_ITEMS = [
     ],
   },
   { name: "ABOUT", path: "/about" },
+  { name: "BLOG", path: "/blog" },
 ];
 
 const Header = memo(function Header() {
@@ -21,12 +23,14 @@ const Header = memo(function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrolled = window.scrollY > 60;
-      setIsScrolled(scrolled);
+      setIsScrolled(window.scrollY > 60);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   useEffect(() => {
@@ -42,7 +46,11 @@ const Header = memo(function Header() {
   }, []);
 
   const isActive = useCallback(
-    (path) => (path === "/" ? location.pathname === "/" : location.pathname.startsWith(path)),
+    (path) =>
+      path === "/"
+        ? location.pathname === "/"
+        : location.pathname === path ||
+          location.pathname.startsWith(`${path}/`),
     [location.pathname]
   );
 
@@ -57,9 +65,9 @@ const Header = memo(function Header() {
       }`}
     >
       <div className="max-w-[1400px] mx-auto flex items-center justify-between px-[clamp(24px,5vw,72px)] py-[clamp(20px,2.8vw,22px)] transition-all duration-400">
-        
+
         {/* Logo */}
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center" onClick={closeMenu}>
           <img
             src={TSPLogo}
             alt="TILT SHIFT Films"
@@ -76,6 +84,7 @@ const Header = memo(function Header() {
             <div key={item.name} className="relative group">
               <Link
                 to={item.path || "#"}
+                aria-current={isActive(item.path) ? "page" : undefined}
                 className={`font-jost text-[0.85rem] font-semibold tracking-[0.26em] uppercase pb-[3px] border-b-2 border-transparent transition-all duration-300 ${
                   isActive(item.path)
                     ? "text-[#c9a84c] border-[#c9a84c]"
@@ -87,9 +96,9 @@ const Header = memo(function Header() {
                 {item.name}
               </Link>
 
-              {/* Desktop Dropdown */}
+              {/* Desktop Portfolio Dropdown */}
               {item.dropdown && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 bg-white shadow-xl min-w-[180px] py-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 mt-3">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 bg-white shadow-xl min-w-[180px] py-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 mt-3">
                   {item.dropdown.map((sub) => (
                     <Link
                       key={sub.name}
@@ -104,7 +113,7 @@ const Header = memo(function Header() {
             </div>
           ))}
 
-          {/* CTA Button */}
+          {/* Desktop CTA Button */}
           <Link
             to="/contact"
             className={`font-jost text-[0.8rem] font-semibold tracking-[0.24em] uppercase px-8 py-[13px] border-2 transition-all duration-300 whitespace-nowrap ${
@@ -117,31 +126,36 @@ const Header = memo(function Header() {
           </Link>
         </nav>
 
-        {/* Hamburger Button */}
+        {/* Mobile Hamburger Button */}
         <button
+          type="button"
           onClick={toggleMenu}
           className="md:hidden flex flex-col justify-center items-end gap-[7px] w-9 h-9 cursor-pointer"
-          aria-label="Toggle menu"
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-navigation"
         >
           <span
             className={`block h-[2px] rounded transition-all duration-300 ${
               isSolidHeader ? "bg-[#1a1a1a]" : "bg-white"
             } ${
-              isMenuOpen ? "w-[30px] rotate-45 translate-y-[9px]" : "w-[30px]"
+              isMenuOpen
+                ? "w-[30px] rotate-45 translate-y-[9px]"
+                : "w-[30px]"
             }`}
           />
           <span
             className={`block h-[2px] rounded transition-all duration-300 ${
               isSolidHeader ? "bg-[#1a1a1a]" : "bg-white"
-            } ${
-              isMenuOpen ? "opacity-0" : "w-[20px]"
-            }`}
+            } ${isMenuOpen ? "opacity-0" : "w-[20px]"}`}
           />
           <span
             className={`block h-[2px] rounded transition-all duration-300 ${
               isSolidHeader ? "bg-[#1a1a1a]" : "bg-white"
             } ${
-              isMenuOpen ? "w-[30px] -rotate-45 -translate-y-[9px]" : "w-[30px]"
+              isMenuOpen
+                ? "w-[30px] -rotate-45 -translate-y-[9px]"
+                : "w-[30px]"
             }`}
           />
         </button>
@@ -149,29 +163,45 @@ const Header = memo(function Header() {
 
       {/* Mobile Menu Drawer */}
       <div
-        className={`overflow-hidden transition-all duration-500 bg-white border-t border-[#eee] ${
-          isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        id="mobile-navigation"
+        aria-hidden={!isMenuOpen}
+        className={`md:hidden overflow-hidden transition-all duration-500 bg-white border-t border-[#eee] ${
+          isMenuOpen
+            ? "max-h-[85vh] overflow-y-auto opacity-100"
+            : "max-h-0 opacity-0 pointer-events-none"
         }`}
       >
-        <div className="px-6 py-5 flex flex-col">
+        <nav className="px-6 py-5 flex flex-col" aria-label="Mobile navigation">
           {NAV_ITEMS.map((item) => (
             <div key={item.name} className="border-b border-[#f5f5f5]">
               <Link
                 to={item.path || "#"}
-                className="flex justify-between items-center py-5 font-jost text-[1.1rem] font-semibold tracking-[0.15em] uppercase text-[#1a1a1a]"
+                aria-current={isActive(item.path) ? "page" : undefined}
+                className={`flex justify-between items-center py-5 font-jost text-[1.1rem] font-semibold tracking-[0.15em] uppercase transition-colors ${
+                  isActive(item.path)
+                    ? "text-[#c9a84c]"
+                    : "text-[#1a1a1a]"
+                }`}
                 onClick={item.dropdown ? closeMenu : undefined}
               >
                 {item.name}
-                <span className="text-base">{item.dropdown ? "↓" : "→"}</span>
+                <span className="text-base">
+                  {item.dropdown ? "↓" : "→"}
+                </span>
               </Link>
 
+              {/* Mobile Portfolio Submenu */}
               {item.dropdown && isMenuOpen && (
                 <div className="pl-5 pb-4 flex flex-col gap-1">
                   {item.dropdown.map((sub) => (
                     <Link
                       key={sub.name}
                       to={sub.path}
-                      className="py-3 text-[0.85rem] tracking-[0.1em] text-[#666]"
+                      className={`py-3 text-[0.85rem] tracking-[0.1em] transition-colors ${
+                        isActive(sub.path)
+                          ? "text-[#c9a84c]"
+                          : "text-[#666]"
+                      }`}
                       onClick={closeMenu}
                     >
                       {sub.name}
@@ -182,14 +212,15 @@ const Header = memo(function Header() {
             </div>
           ))}
 
+          {/* Mobile CTA Button */}
           <Link
             to="/contact"
             onClick={closeMenu}
-            className="mt-8 text-center bg-[#1a1a1a] text-white py-[18px] font-semibold tracking-[0.2em] uppercase"
+            className="mt-8 text-center bg-[#1a1a1a] text-white py-[18px] font-semibold tracking-[0.2em] uppercase hover:bg-[#c9a84c] transition-colors"
           >
             Get In Touch
           </Link>
-        </div>
+        </nav>
       </div>
     </header>
   );

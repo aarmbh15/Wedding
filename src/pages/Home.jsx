@@ -38,7 +38,7 @@ import ThumbRahulEsha from "../assets/Filmsthumbnail/esha & rahul.webp";
 import ThumbHarjotShruti from "../assets/Filmsthumbnail/harjot & shruti.webp";
 import ThumbBhaktiSaurabh from "../assets/Filmsthumbnail/bhakti & saurabh.webp";
 
-const allImages = import.meta.glob("../assets/**/*.{webp,jpeg,png}", { eager: true });
+const allImages = import.meta.glob("../assets/**/*.{webp,jpeg,png,jpg}", { eager: true });
 const img = (path) => allImages[`../assets/${path}`]?.default;
 
 function toEmbedUrl(url) {
@@ -162,18 +162,23 @@ const portfolioGrid = [
 ];
 
 const featured = [
-  { slug: "Atharva_Haritha", couple: "Atharva & Harita", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Atharva_Harita.webp") },
+  { slug: "Aishwarya_Sanmay", couple: "Sanmay & Aishwarya", location: "Sorina Hills Resort, Khadakwasla, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Couple82.jpg") },
+  // { slug: "Atharva_Haritha", couple: "Atharva & Harita", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Atharva_Harita.webp") },
   { slug: "Anuja_Shubhang", couple: "Shubhang & Anuja", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Anuja_Shubhang.webp") },
   { slug: "Atish_Shweta", couple: "Atish & Shweta", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Atish_Shweta.webp") },
 ];
 
 const testimonials = [
-  { name: "Amey", text: "Nityanand and his amazing team deliver absolutely incredible photography! Over time, Nityanand has gone from being just a hired professional to our trusted family photographer and a genuine friend. We have trusted them to capture all of our family functions and the experience is always wonderful. I highly recommend them for any special occasion." },
-  { name: "Sumeet", text: "We couldn't have asked for a better wedding photographer. From making us feel completely at ease to capturing every emotion and little detail so beautifully, the entire experience was wonderful. The photos truly let us relive our special day and we are so grateful for the memories they have given us. Highly recommended!" },
-  { name: "Aishwarya", text: "We had a really lovely experience with them comfort and constant support. You can truly trust them for your big day! Their attention to small candid moments is what makes them unique." },
-  { name: "John", text: "Nithyanad and team were very professional and easy to work with. Right from the start, they worked with us to ensure our requirements were understood and were very calm and patient throughout the 3 days of our wedding events. The turnaround they provided was excellent. Their teaser and 10 min wedding trailers were also absolutely amazing!" },
-  { name: "Sanskruti", text: "We had a great experience with TiltShift Pictures for our wedding. We absolutely loved the photography, videography, editing and the team's guidance during the shoots. They captured our moments beautifully and the final output exceeded our expectations. Overall, we are happy with their work and would definitely recommend them!" }
+  { name: "Amey & Amruta", text: "Nityanand and his amazing team deliver absolutely incredible photography! Over time, Nityanand has gone from being just a hired professional to our trusted family photographer and a genuine friend. We have trusted them to capture all of our family functions and the experience is always wonderful. I highly recommend them for any special occasion." },
+  { name: "Sumeet & Juili", text: "We couldn't have asked for a better wedding photographer. From making us feel completely at ease to capturing every emotion and little detail so beautifully, the entire experience was wonderful. The photos truly let us relive our special day and we are so grateful for the memories they have given us. Highly recommended!" },
+  { name: "Aishwarya & Sanmay", text: "We had a really lovely experience with them comfort and constant support. You can truly trust them for your big day! Their attention to small candid moments is what makes them unique." },
+  { name: "John & Ketki", text: "Nithyanad and team were very professional and easy to work with. Right from the start, they worked with us to ensure our requirements were understood and were very calm and patient throughout the 3 days of our wedding events. The turnaround they provided was excellent. Their teaser and 10 min wedding trailers were also absolutely amazing!" },
+  { name: "Sanskruti & Rajat", text: "We had a great experience with TiltShift Pictures for our wedding. We absolutely loved the photography, videography, editing and the team's guidance during the shoots. They captured our moments beautifully and the final output exceeded our expectations. Overall, we are happy with their work and would definitely recommend them!" },
+  { name: "Shruti & Harjot", text: "One of the best vendors we hired for our wedding! They work incredibly efficiently and capture beautiful moments even in the tightest timelines. They never get in the way of the events, yet somehow manage to catch all the important candid moments. The entire team is warm, personable and an absolute pleasure to work with. They made the whole experience feel effortless and we couldn’t be happier with our photos." },
+  { name: "Kirti & Hrishi", text: "Tilt Shift Pictures beautifully captured our wedding with stunning candid moments, traditional ceremonies and all the fun and emotions. The team was supportive throughout, guiding us with couple poses and bridal portraits. We absolutely love our wedding photos and films and their patience with video edits made the entire experience wonderful. Highly recommend their talented team!" }
 ];
+
+
 
 const aboutImg = img("Chaitrali_Shubham/img407.webp");
 

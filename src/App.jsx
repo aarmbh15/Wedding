@@ -5,6 +5,8 @@ import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import ScrollToTop from './components/ScrollToTop.jsx'; // ← Import the new component
 import FloatingWhatsApp from './components/FloatingWhatsApp.jsx';
+import Blog from "./pages/Blog";
+import BlogDetail from "./pages/BlogDetail";
 
 const Home = lazy(() => import('./pages/Home.jsx'));
 const About = lazy(() => import('./pages/About.jsx'));
@@ -50,6 +52,8 @@ function App() {
               <Route path="/wedding/:slug" element={<WeddingPage />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/films" element={<Films />} />
+              <Route path="/blog" element={<Blog />} />
+<Route path="/blog/:slug" element={<BlogDetail />} />
             </Routes>
           </Suspense>
           <WhatsAppFab />

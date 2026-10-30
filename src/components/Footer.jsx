@@ -52,7 +52,7 @@ const Footer = memo(function Footer() {
               />
             </Link>
 
-            <p className="text-[0.85rem] leading-loose text-white/50 font-light max-w-[300px]">
+            <p className="text-[0.9rem] font-medium text-white/70 transition-colors duration-300">
               Capturing genuine emotions and candid moments, turning every wedding into a story worth remembering.
             </p>
 
@@ -102,7 +102,7 @@ const Footer = memo(function Footer() {
                 <span className="mt-0.5 w-8 h-8 flex items-center justify-center rounded-full bg-white/5 text-[#c9a84c] shrink-0">
                   <MapPin size={15} strokeWidth={1.5} />
                 </span>
-                <p className="text-[0.85rem] text-white/70 leading-relaxed max-w-[240px] text-left">
+                <p className="text-[0.9rem] font-medium text-white/70 transition-colors duration-300">
                   Bunglow no 6, Periwinkle Society, Near Yogi park Baner, Pune 411045
                 </p>
               </div>
@@ -113,7 +113,7 @@ const Footer = memo(function Footer() {
                 </span>
                 <a
                   href="mailto:hello@tiltshiftpictures.com"
-                  className="text-[0.85rem] text-white/70 hover:text-[#c9a84c] transition-colors duration-300"
+                  className="text-[0.9rem] font-medium text-white/70 hover:text-[#c9a84c] transition-colors duration-300"
                 >
                   hello@tiltshiftpictures.com
                 </a>
@@ -125,7 +125,7 @@ const Footer = memo(function Footer() {
                 </span>
                 <a
                   href="tel:+919579328262"
-                  className="text-[0.85rem] text-white/70 hover:text-[#c9a84c] transition-colors duration-300"
+                  className="text-[0.9rem] font-medium text-white/70 hover:text-[#c9a84c] transition-colors duration-300"
                 >
                   +91 95793 28262
                 </a>
