@@ -1,7 +1,7 @@
-
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { fetchAllBlogs } from "../contentfulClient";
+import blogImage from "../assets/blog-image1.jpeg";
 
 function getImageUrl(asset) {
   const url = asset?.fields?.file?.url;
@@ -39,20 +39,34 @@ export default function Blog() {
 
   return (
     <main className="min-h-screen bg-[#f7f5f0] text-[#302b27]">
-      {/* Hero */}
-      <section className="bg-[#eeebe4] px-5 py-24 text-center sm:py-32">
-        <p className="mb-5 text-xs font-medium uppercase tracking-[0.3em] text-[#9b7b4b]">
-          Tilt Shift Pictures
-        </p>
+      {/* Hero with background image */}
+      <section className="relative flex min-h-[470px] items-center justify-center overflow-hidden bg-[#302b27] px-5 pb-20 pt-32 text-center sm:min-h-[520px]">
+        {/* Background image */}
+        <img
+          src={blogImage}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
 
-        <h1 className="mx-auto max-w-4xl font-serif text-4xl font-normal leading-tight sm:text-6xl lg:text-7xl">
-          Stories That Stay With You
-        </h1>
+        {/* Dark overlay for readable text */}
+        <div className="absolute inset-0 bg-black/50" />
 
-        <p className="mx-auto mt-6 max-w-2xl text-sm leading-8 text-[#77716b] sm:text-base">
-          Wedding inspiration, photography advice, and stories about
-          preserving the moments that matter most.
-        </p>
+        {/* Content */}
+        <div className="relative z-10 mx-auto w-full max-w-5xl text-white">
+          <p className="mt-15 text-xs font-medium uppercase tracking-[0.3em] text-[#d1ad54]">
+            Tilt Shift Pictures
+          </p>
+
+          <h1 className="mx-auto max-w-4xl  font-serif text-4xl font-normal leading-tight sm:text-6xl lg:text-7xl">
+            Stories That Stay With You
+          </h1>
+
+          <p className="mx-auto  max-w-2xl text-sm leading-8 text-white/80 sm:text-base">
+            Wedding inspiration, photography advice, and stories about
+            preserving the moments that matter most.
+          </p>
+        </div>
       </section>
 
       {/* Blog listing */}

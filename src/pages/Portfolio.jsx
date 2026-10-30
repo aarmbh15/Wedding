@@ -4,11 +4,11 @@ import { useNavigate, useLocation } from "react-router-dom";
 import HeroImage from "../assets/hero5.webp";
 import CTABg from "../assets/3.webp";
 
-const allImages = import.meta.glob("../assets/**/*.{webp,jpeg,png}", { eager: true });
+const allImages = import.meta.glob("../assets/**/*.{webp,jpeg,png,jpg}", { eager: true });
 const img = (path) => allImages[`../assets/${path}`]?.default;
 
 const weddings = [
-  { slug: "Aishwarya_Sanmay", couple: "Sanmay & Aishwarya", location: "Sorina Hills Resort, Khadakwasla, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Sanmay_Aishwarya.webp") },
+  { slug: "Aishwarya_Sanmay", couple: "Sanmay & Aishwarya", location: "Sorina Hills Resort, Khadakwasla, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Couple82.jpg") },
   { slug: "Esha_Rahul", couple: "Esha & Rahul", location: "Fort JadhavGADH, Pune, Maharashtra", date: "Month Year", category: "Tag", cover: img("portfolio/Rahul_Esha.jpeg") },
   { slug: "Shruti_Harjot", couple: "Harjot & Shruti", location: "The Orchid Hotel, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Shruti_Harjot.webp") },
   { slug: "Raj_Suhasini", couple: "Raj & Suhasini", location: "Marigold Banquets 'N' Conventions, Pune", date: "Month Year", category: "Tag", cover: img("portfolio/Raj_Suhasini.webp") },

@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { fetchBlogBySlug } from "../contentfulClient";
@@ -36,10 +35,7 @@ function ArticleBody({ content }) {
   return (
     <div className="article-body">
       {paragraphs.map((paragraph, index) => (
-        <p
-          key={index}
-          className="mb-6 whitespace-pre-line break-words"
-        >
+        <p key={index} className="mb-6 whitespace-pre-line break-words">
           {paragraph}
         </p>
       ))}
@@ -70,9 +66,7 @@ export default function BlogDetail() {
         if (!isActive) return;
 
         if (!entry) {
-          setError(
-            "We couldn't find this story. It may not be published yet."
-          );
+          setError("We couldn't find this story. It may not be published yet.");
           return;
         }
 
@@ -101,12 +95,10 @@ export default function BlogDetail() {
 
   if (loading) {
     return (
-      <main className="grid min-h-[60vh] place-items-center bg-[#f7f5f0] px-5 text-[#77716b]">
+      <main className="grid min-h-[60vh] place-items-center bg-[#f7f5f0] px-5 pt-32 text-[#77716b]">
         <div className="text-center">
           <div className="mx-auto mb-5 h-8 w-8 animate-spin rounded-full border-2 border-[#ded8cf] border-t-[#9b7b4b]" />
-          <p className="font-serif text-xl">
-            Preparing your story...
-          </p>
+          <p className="font-serif text-xl">Preparing your story...</p>
         </div>
       </main>
     );
@@ -114,7 +106,7 @@ export default function BlogDetail() {
 
   if (error || !post) {
     return (
-      <main className="grid min-h-[60vh] place-items-center bg-[#f7f5f0] px-5 py-20 text-center text-[#302b27]">
+      <main className="grid min-h-[60vh] place-items-center bg-[#f7f5f0] px-5 pb-20 pt-36 text-center text-[#302b27]">
         <div className="max-w-lg">
           <p className="mb-4 text-xs uppercase tracking-[0.25em] text-[#9b7b4b]">
             Tilt Shift Pictures · Journal
@@ -130,7 +122,7 @@ export default function BlogDetail() {
 
           <Link
             to="/blog"
-            className="mt-8 inline-block border border-[#9b7b4b] px-6 py-3 text-xs uppercase tracking-[0.15em] transition hover:bg-[#9b7b4b] hover:text-white"
+            className="relative z-30 mt-8 inline-block border border-[#9b7b4b] px-6 py-3 text-xs uppercase tracking-[0.15em] transition hover:bg-[#9b7b4b] hover:text-white"
           >
             ← Back to the journal
           </Link>
@@ -148,11 +140,11 @@ export default function BlogDetail() {
   return (
     <main className="min-h-screen bg-[#f7f5f0] text-[#302b27]">
       <article>
-        {/* Article heading */}
-        <header className="mx-auto max-w-5xl px-5 pb-10 pt-12 sm:px-8 sm:pb-14 sm:pt-20">
+        {/* Article heading (top padding clears the fixed navbar) */}
+        <header className="relative mx-auto max-w-5xl px-5 pb-10 pt-32 sm:px-8 sm:pb-14 sm:pt-40">
           <Link
             to="/blog"
-            className="mb-12 inline-flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-[#81776d] transition hover:text-[#9b7b4b]"
+            className="relative z-30 mb-12 inline-flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-[#81776d] transition hover:text-[#9b7b4b]"
           >
             <span aria-hidden="true">←</span> All stories
           </Link>
@@ -176,7 +168,6 @@ export default function BlogDetail() {
             <img
               src={imageUrl}
               alt={featuredImage?.fields?.description || title}
-              fetchPriority="high"
               className="max-h-[680px] w-full object-cover"
             />
           </figure>
@@ -187,19 +178,19 @@ export default function BlogDetail() {
           <ArticleBody content={bodyContent} />
 
           {/* Closing section */}
-          <footer className="mt-16 border-t border-[#ded8cf] pt-8 sm:mt-20">
+          <footer className="relative mt-16 border-t border-[#ded8cf] pt-8 sm:mt-20">
             <p className="font-serif text-2xl leading-relaxed text-[#302b27] sm:text-3xl">
               Every wedding has a story worth remembering.
             </p>
 
             <p className="mt-3 text-sm leading-7 text-[#77716b]">
-              At Tilt Shift Pictures, we capture the moments, emotions, and little
-              details that make your story yours.
+              At Tilt Shift Pictures, we capture the moments, emotions, and
+              little details that make your story yours.
             </p>
 
             <Link
               to="/blog"
-              className="mt-7 inline-flex items-center gap-2 text-xs uppercase tracking-[0.15em] text-[#9b7b4b] transition hover:text-[#725832]"
+              className="relative z-30 mt-7 inline-flex items-center gap-2 text-xs uppercase tracking-[0.15em] text-[#9b7b4b] transition hover:text-[#725832]"
             >
               Explore more stories <span aria-hidden="true">→</span>
             </Link>
