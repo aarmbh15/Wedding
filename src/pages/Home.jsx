@@ -340,7 +340,7 @@ function HeroSlider() {
 
 const FilmCard = React.memo(function FilmCard({ film, onSelect }) {
   return (
-    <div className="w-full cursor-pointer group" onClick={() => onSelect(film)}>
+    <div className="w-full" onClick={() => onSelect(film)}>
       <div className="relative aspect-video overflow-hidden rounded-sm bg-[#1a1a1a] mb-5 shadow-sm">
         <img
           src={film.thumbnail || `https://img.youtube.com/vi/${film.id}/maxresdefault.webp`}
