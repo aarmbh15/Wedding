@@ -9,6 +9,7 @@ const FOOTER_LINKS = [
   { name: "Films", path: "/films" },
   { name: "Photography", path: "/portfolio" },
   { name: "Contact", path: "/contact" },
+  { name: "Blog", path: "/blog" },
 ];
 
 const SOCIAL_LINKS = [

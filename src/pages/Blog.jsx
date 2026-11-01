@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { fetchAllBlogs } from "../contentfulClient";
 import blogImage from "../assets/blog-image1.jpeg";
+import blogImageMobile from "../assets/blog-imagemob.jpeg";
 
 function getImageUrl(asset) {
   const url = asset?.fields?.file?.url;
@@ -40,29 +41,37 @@ export default function Blog() {
   return (
     <main className="min-h-screen bg-[#f7f5f0] text-[#302b27]">
       {/* Hero with background image */}
-      <section className="relative flex min-h-[470px] items-center justify-center overflow-hidden bg-[#302b27] px-5 pb-20 pt-32 text-center sm:min-h-[520px]">
-        {/* Background image */}
-        <img
-          src={blogImage}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover object-center"
-        />
+      {/* Mobile: taller hero, text pushed to the bottom so faces stay visible */}
+      {/* Desktop (sm and up): same as before, text centered */}
+      <section className="relative flex min-h-[640px] items-end justify-center overflow-hidden bg-[#302b27] px-5 pb-12 pt-32 text-center sm:min-h-[520px] sm:items-center sm:pb-20">
+        {/* Background image: mobile image on small screens, original image on desktop */}
+        <picture>
+          <source media="(max-width: 639px)" srcSet={blogImageMobile} />
+          <img
+            src={blogImage}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 h-full w-full object-cover object-top sm:object-center"
+          />
+        </picture>
 
         {/* Dark overlay for readable text */}
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/30 sm:bg-black/50" />
+
+        {/* Extra bottom gradient on mobile only, so the text stays readable */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent sm:hidden" />
 
         {/* Content */}
         <div className="relative z-10 mx-auto w-full max-w-5xl text-white">
-          <p className="mt-15 text-xs font-medium uppercase tracking-[0.3em] text-[#d1ad54]">
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#d1ad54] sm:mt-15">
             Tilt Shift Pictures
           </p>
 
-          <h1 className="mx-auto max-w-4xl  font-serif text-4xl font-normal leading-tight sm:text-6xl lg:text-7xl">
+          <h1 className="mx-auto max-w-4xl font-serif text-4xl font-normal leading-tight sm:text-6xl lg:text-7xl">
             Stories That Stay With You
           </h1>
 
-          <p className="mx-auto  max-w-2xl text-sm leading-8 text-white/80 sm:text-base">
+          <p className="mx-auto max-w-2xl text-sm leading-8 text-white/80 sm:text-base">
             Wedding inspiration, photography advice, and stories about
             preserving the moments that matter most.
           </p>
