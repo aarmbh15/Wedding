@@ -349,7 +349,7 @@ const FilmCard = React.memo(function FilmCard({ film, onSelect }) {
           decoding="async"
           className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
+        <div className="absolute inset-0 bg-black/10 group-hover:bg-black/10 transition-colors duration-500" />
               <div className="absolute inset-0 flex items-center justify-center opacity-100 scale-100 md:opacity-0 md:group-hover:opacity-100 md:scale-90 md:group-hover:scale-100 transition-all duration-500 ease-out pointer-events-none">
          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-black/15 md:bg-white/10 flex items-center justify-center border border-white/20 md:border-white/20 shadow-lg">
            <Play className="w-5 h-5 text-white/90 fill-white/90 ml-1" />
@@ -803,7 +803,7 @@ export default function Home() {
                         decoding="async"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
+                      <div className="absolute inset-0 bg-black/10 group-hover:bg-black/10 transition-colors duration-500" />
                     </div>
 
                     <h3 className="font-cormorant text-[1.45rem] text-[#1a1a1a] transition-colors duration-400 group-hover:text-[#c9a84c]">
@@ -885,7 +885,7 @@ export default function Home() {
           <div className="relative w-full max-w-2xl max-h-[92vh] overflow-y-auto bg-[#FDFCF9] p-6 md:p-8 shadow-2xl animate-[fadeIn_0.3s_ease-out] rounded-sm custom-scrollbar">
             <div className="sticky top-0 bg-[#FDFCF9] z-20 flex justify-between items-center mb-6 border-b border-black/5 pb-4 pt-2 -mt-2">
               <h2 className="font-['Cormorant_Garamond'] text-2xl font-light text-[#1a1a1a]">Enquire Now</h2>
-              <button onClick={() => setShowEnquiry(false)} className="w-8 h-8 flex items-center justify-center rounded-full bg-black/5 hover:bg-black/10 transition-colors" aria-label="Close popup">
+              <button onClick={() => setShowEnquiry(false)} className="w-8 h-8 flex items-center justify-center rounded-full bg-black/5 hover:bg-black/ transition-colors" aria-label="Close popup">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
               </button>
             </div>
